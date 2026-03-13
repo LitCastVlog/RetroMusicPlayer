@@ -177,6 +177,7 @@
     <string name="image_gradient">Gradient image</string>
     <string name="image_settings_summary">Aldatu artisten irudien deskarga ezarpenak</string>
     <string name="inserted_x_songs_into_playlist_x">%1$d abesti gehitu dira %2$s erreprodukzio zerrendan</string>
+    <string name="instagram_page_summary">Partekatu zure Retro Music-en konfigurazioa Instagram-en</string>
     <string name="keyboard">Keyboard</string>
     <string name="label_bit_rate">Bit-tasa</string>
     <string name="label_file_format">Formatua</string>
@@ -224,6 +225,8 @@
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> ez dator dendan zerrendatua]]></string>
     <string name="nothing_to_scan">Eskaneatzekorik ez</string>
     <string name="nothing_to_see">Nothing to see</string>
+    <string name="notification">Jakinarazpena</string>
+    <string name="notification_settings_summary">Jakinarazpen estiloa pertsonalizatu</string>
     <string name="now_playing">Orain erreproduzitzen</string>
     <string name="now_playing_queue">Erreprodukzio ilara</string>
     <string name="now_playing_summary">Pertsonalizatu orain erreproduzitzen pantaila</string>
@@ -273,6 +276,7 @@
     <string name="pref_summary_bluetooth_playback">Start playing as soon as connected to bluetooth device</string>
     <string name="pref_summary_blurred_album_art">Lausotu albumaren azala blokeo-pantailan. Arazoak sor ditzazke hirugarrenen aplikazio edota widgetekin</string>
     <string name="pref_summary_carousel_effect">Karrusel efektua erreprodukzio pantailako album azalerako. Kontuan izan Txartela eta Txartel lausotua gaiek ez dutela funtzionatuko</string>
+    <string name="pref_summary_classic_notification">Erabili jakinarazpenen diseinu klasikoa</string>
     <string name="pref_summary_colored_app">Orain erreproduzitzen pantailan atzealdeko eta kontrol botoien koloreak album azalaren arabera aldatuko dira</string>
     <string name="pref_summary_colored_app_shortcuts">Aplikazioaren lasterbideak azentu kolorean ezartzen ditu. Kolorea aldatzen duzun bakoitzean hau birraktibatu aldaketak aplikatzeko</string>
     <string name="pref_summary_colored_notification">"Jakinarazpena albumaren azalaren kolore nagusian ezarri"</string>
@@ -280,6 +284,7 @@
     <string name="pref_summary_expand_now_playing_panel">Clicking on the notification will show now playing screen instead of the home screen</string>
     <string name="pref_summary_extra_controls">Gehitu kontrol gehigarriak erreproduzitzaile txikirako</string>
     <string name="pref_summary_extra_song_info">Show extra Song information, such as file format, bitrate and frequency</string>
+    <string name="pref_summary_gapless_playback">"Erreprodukzio arazoak sor ditzake gailu batzuetan"</string>
     <string name="pref_summary_home_banner">Txandakatu hasierako banner estiloa</string>
     <string name="pref_summary_ignore_media_store_artwork">Album azalaren kalitatea hobetu dezake, baina irudien kargatze-denbora moteltzen du. Soilik bereizmen baxuko azalekin arazoa baduzu aktibatu</string>
     <string name="pref_summary_library_categories">Configure visibility and order of library categories.</string>
@@ -298,12 +303,14 @@
     <string name="pref_title_blacklist">Zerrenda beltza</string>
     <string name="pref_title_bluetooth_playback">Bluetooth playback</string>
     <string name="pref_title_blurred_album_art">Lausotu albumaren azala</string>
+    <string name="pref_title_classic_notification">Jakinarazpenen diseinu klasikoa</string>
     <string name="pref_title_colored_app">Kolore moldagarria</string>
     <string name="pref_title_colored_notification">Jakinarazpen koloreztatua</string>
     <string name="pref_title_desaturated_color">Desaturated color</string>
     <string name="pref_title_expand_now_playing_panel">Show now playing screen</string>
     <string name="pref_title_extra_controls">Kontrol gehigarriak</string>
     <string name="pref_title_extra_song_info">Song info</string>
+    <string name="pref_title_gapless_playback">Tarterik gabeko erreprodukzioa</string>
     <string name="pref_title_general_theme">Aplikazioaren gaia</string>
     <string name="pref_title_home_artist_grid_style">Hasierako artista sareta</string>
     <string name="pref_title_home_banner">Hasierako bannerra</string>

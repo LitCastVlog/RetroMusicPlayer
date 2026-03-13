@@ -22,9 +22,9 @@ import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import code.name.monkey.appthemehelper.util.TintHelper
+import code.name.monkey.retromusic.extensions.*
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.databinding.FragmentMd3PlayerPlaybackControlsBinding
-import code.name.monkey.retromusic.extensions.*
 import code.name.monkey.retromusic.fragments.base.AbsPlayerControlsFragment
 import code.name.monkey.retromusic.fragments.base.goToAlbum
 import code.name.monkey.retromusic.fragments.base.goToArtist
@@ -160,8 +160,10 @@ class MD3PlaybackControlsFragment :
     private fun updatePlayPauseDrawableState() {
         if (MusicPlayerRemote.isPlaying) {
             binding.playPauseButton.setImageResource(R.drawable.ic_pause_outline_small)
+            binding.playPauseCard.animateRadius(40F)
         } else {
             binding.playPauseButton.setImageResource(R.drawable.ic_play_arrow_outline_small)
+            binding.playPauseCard.animateToCircle()
         }
     }
 

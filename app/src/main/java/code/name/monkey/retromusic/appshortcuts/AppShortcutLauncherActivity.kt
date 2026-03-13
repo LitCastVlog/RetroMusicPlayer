@@ -68,7 +68,6 @@ class AppShortcutLauncherActivity : Activity() {
             INTENT_EXTRA_PLAYLIST to playlist,
             INTENT_EXTRA_SHUFFLE_MODE to shuffleMode
         )
-        intent.setPackage(this.packageName)
 
         intent.putExtras(bundle)
 
@@ -76,7 +75,7 @@ class AppShortcutLauncherActivity : Activity() {
     }
 
     companion object {
-        const val KEY_SHORTCUT_TYPE = "code.name.monkey.retromusic.appshortcuts.ShortcutType"
+        const val KEY_SHORTCUT_TYPE = "io.github.muntashirakon.Music.appshortcuts.ShortcutType"
         const val SHORTCUT_TYPE_SHUFFLE_ALL = 0L
         const val SHORTCUT_TYPE_TOP_TRACKS = 1L
         const val SHORTCUT_TYPE_LAST_ADDED = 2L

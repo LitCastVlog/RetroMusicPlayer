@@ -20,8 +20,7 @@ import code.name.monkey.retromusic.R
 
 object HorizontalAdapterHelper {
 
-    val LAYOUT_RES
-        get() = R.layout.item_image
+    const val LAYOUT_RES = R.layout.item_image
 
     private const val TYPE_FIRST = 1
     private const val TYPE_MIDDLE = 2

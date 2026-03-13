@@ -60,7 +60,7 @@
     <string name="added_x_titles_to_playing_queue">%1$d பாடல்கள் வரிசையில் சேர்க்கப்பட்டுள்ளது.</string>
     <string name="album">தொகுப்பு</string>
     <plurals name="albumSongs">
-        <item quantity="one">பாடல்</item>
+        <item quantity="one">Song</item>
         <item quantity="other">பாடல்கள்</item>
     </plurals>
     <string name="album_artist">பாடல் ஆசிரியர்</string>
@@ -146,12 +146,12 @@
     <string name="customactivityoncrash_error_activity_error_details_share">தவற்றின் விவரத்தை பகிர்</string>
     <string name="dark_theme_name">இலங்கருப்பு</string>
     <string name="delete_playlist_title">இசைப் பட்டியலை நீக்கு</string>
-    <string name="delete_playlist_x"><![CDATA[இசைப்பட்டியல் <b>%1$s</b>\'யை நீக்கு?]]></string>
+    <string name="delete_playlist_x"><![CDATA[இசைப்பட்டியல் <b>%1$s</b>யை நீக்கு?]]></string>
     <string name="delete_playlists_title">இசைப்பட்டியல்களை நீக்கு</string>
     <string name="delete_song_title">பாடலை நீக்கு</string>
-    <string name="delete_song_x"><![CDATA[பாடல் <b>%1$s</b>\'யை நீக்கு?]]></string>
+    <string name="delete_song_x"><![CDATA[பாடல் <b>%1$s</b>யை நீக்கு?]]></string>
     <string name="delete_songs_title">பாடல்களை நீக்கு</string>
-    <string name="delete_x_playlists"><![CDATA[இசைப்பட்டியல் <b>%1$d</b>\'யை நீக்கு?]]></string>
+    <string name="delete_x_playlists"><![CDATA[இசைப்பட்டியல் <b>%1$d</b>யை நீக்கு?]]></string>
     <string name="delete_x_songs"><![CDATA[பாடல்கள் <b>%1$d</b> நீக்கு?]]></string>
     <string name="deleted_x_songs">நீக்கப்பட்ட பாடல்கள் %1$d</string>
     <string name="deleting_songs">பாடல்கள் நீக்கப்படுகிறது</string>
@@ -221,6 +221,7 @@
     <string name="import_playlist">பாடல் வரிசைகளை எடு</string>
     <string name="import_playlist_message">சாதனத்தில் உள்ள அனைத்து பாடல்களும் இனைக்கப்படும்.</string>
     <string name="inserted_x_songs_into_playlist_x">%2$s\'யில் %1$d பாடல்கள் சேர்க்கப்பட்டுள்ளது.</string>
+    <string name="instagram_page_summary">தங்களின் Retro Music அமைப்பை Instagramயில் பகிரவும்</string>
     <string name="keyboard">விசைப்பலகை</string>
     <string name="label_bit_rate">துடிப்பளவு</string>
     <string name="label_file_format">வடிவமைப்பு</string>
@@ -264,21 +265,22 @@
     <string name="no_artists">உங்களிடம் இசையமைப்பாளர் குறிப்புடு இல்லை</string>
     <string name="no_audio_ID">"முதலில் பாட்டைத் தொடக்கவும், அதன் பின்பு மீண்டும் முயற்சிக்கவும்."</string>
     <string name="no_backups_found">மறுபிரதி காணவில்லை</string>
-    <string name="no_equalizer">ஒலி சமநிலையியை காணவில்லை</string>
-    <string name="no_genres">உங்களிடம் இசை வகை இல்லை</string>
-    <string name="no_lyrics_found">பாடல் வரிகள் எதுவும் கிடைக்கவில்லை</string>
-    <string name="no_playing_queue">பாடல்கள் எதுவும் ஒலிக்கவில்லை</string>
-    <string name="no_playlists">உங்களிடம் பாட்டுதொகுப்பு எதும் இல்லை</string>
-    <string name="no_purchase_found">வாங்கி பெற்றதாக எதுவும் இல்லை.</string>
-    <string name="no_results">முடிவுகள் இல்லை</string>
-    <string name="no_songs">உங்களிடம் பாடல்கள் இல்லை</string>
-    <string name="no_search_results">No search results</string>
-    <string name="normal">இயல்பு</string>
-    <string name="normal_lyrics">இயல்பான பாடல் வரிகள்</string>
-    <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> ஊடகத்தில் இல்லை.]]></string>
-    <string name="not_recently_played">அண்மையில் பயன்படுத்தவில்லை</string>
-    <string name="nothing_to_scan">அலச ஒன்றுமில்லை.</string>
-    <string name="nothing_to_see">காண ஒன்றுமில்லை</string>
+    <string name="no_equalizer">No equalizer found</string>
+    <string name="no_genres">You have no genres</string>
+    <string name="no_lyrics_found">No lyrics found</string>
+    <string name="no_playing_queue">No songs playing</string>
+    <string name="no_playlists">You have no playlists</string>
+    <string name="no_purchase_found">No purchase found.</string>
+    <string name="no_results">No results</string>
+    <string name="no_songs">You have no songs</string>
+    <string name="normal">Normal</string>
+    <string name="normal_lyrics">Normal lyrics</string>
+    <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> is not listed in the media store.]]></string>
+    <string name="not_recently_played">Not recently played</string>
+    <string name="nothing_to_scan">Nothing to scan.</string>
+    <string name="nothing_to_see">Nothing to see</string>
+    <string name="notification">Notification</string>
+    <string name="notification_settings_summary">Customize the notification style</string>
     <string name="now_playing">Now playing</string>
     <string name="now_playing_queue">Now playing queue</string>
     <string name="now_playing_summary">Customize the now playing screen</string>
@@ -287,7 +289,7 @@
     <string name="other_settings_summary">Advanced testing features</string>
     <string name="others">Other</string>
     <string name="over_cover">Over Cover</string>
-    <string name="password">கடவுச்சொல்</string>
+    <string name="password">Password</string>
     <string name="past_three_months">Past 3 months</string>
     <string name="paste_lyrics_here">Paste Lyrics Here</string>
     <string name="paste_timeframe_lyrics_here">Paste timeframe lyrics here</string>
@@ -328,11 +330,9 @@
     <string name="pref_header_lockscreen">Lockscreen</string>
     <string name="pref_header_playlists">Playlists</string>
     <string name="pref_keep_pause_on_zero_volume_summary">Pauses the song when the volume decreases to zero and starts playing back when the volume level rises. Also works outside the app</string>
-    <string name="pref_keep_pause_on_zero_volume_title">சுழியத்தை அடைந்தால் இடைநிறுத்து</string>
+    <string name="pref_keep_pause_on_zero_volume_title">Pause on zero</string>
     <string name="pref_keep_screen_on_summary">Keep in mind that enabling this feature may affect battery life</string>
     <string name="pref_keep_screen_on_title">Keep the screen on</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">Select language</string>
     <string name="pref_snow_fall_title">Snow fall effect</string>
     <string name="pref_summary_album_art_on_lockscreen">Use the currently playing song album cover as the lockscreen wallpaper</string>
@@ -343,6 +343,7 @@
     <string name="pref_summary_bluetooth_playback">Start playing as soon as connected to bluetooth device</string>
     <string name="pref_summary_blurred_album_art">Blur the album cover on the lockscreen. Can cause problems with third party apps and widgets</string>
     <string name="pref_summary_carousel_effect">Carousel effect for the album art in the now playing screen. Note that Card and Blur Card themes won\'t work</string>
+    <string name="pref_summary_classic_notification">Use the classic notification design</string>
     <string name="pref_summary_colored_app">The background and control button colors change according to the album art from the now playing screen</string>
     <string name="pref_summary_colored_app_shortcuts">Colors the app shortcuts in the accent color. Every time you change the color please toggle this to take effect</string>
     <string name="pref_summary_colored_notification">"Colors the notification in the album cover\u2019s vibrant color"</string>
@@ -351,6 +352,7 @@
     <string name="pref_summary_expand_now_playing_panel">Clicking on the notification will show now playing screen instead of the home screen</string>
     <string name="pref_summary_extra_controls">Add extra controls for mini player</string>
     <string name="pref_summary_extra_song_info">Show extra Song information, such as file format, bitrate and frequency</string>
+    <string name="pref_summary_gapless_playback">"Can cause playback issues on some devices."</string>
     <string name="pref_summary_home_banner">Show or hide the home banner</string>
     <string name="pref_summary_ignore_media_store_artwork">Can increase the album cover quality, but causes slower image loading times. Only enable this if you have problems with low resolution artworks</string>
     <string name="pref_summary_library_categories">Configure visibility and order of library categories.</string>
@@ -359,7 +361,6 @@
     <string name="pref_summary_open_source_licences">License details for open source software</string>
     <string name="pref_summary_pause_history">When enabled, newly played songs won\'t show in history</string>
     <string name="pref_summary_remember_tab">Navigate to the last used tab on start</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">Display synced lyrics over album cover</string>
     <string name="pref_summary_suggestions">Show New Music Mix on homescreen</string>
     <string name="pref_summary_swipe_anywhere_now_playing">Enables changing song by swiping anywhere on the now playing screen</string>
@@ -383,6 +384,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth playback</string>
     <string name="pref_title_blurred_album_art">Blur album cover</string>
     <string name="pref_title_circle_button">Circular play button</string>
+    <string name="pref_title_classic_notification">Classic notification design</string>
     <string name="pref_title_colored_app">Adaptive color</string>
     <string name="pref_title_colored_notification">Colored notification</string>
     <string name="pref_title_cross_fade">Crossfade (Beta)</string>
@@ -391,6 +393,7 @@
     <string name="pref_title_expand_now_playing_panel">Show now playing screen</string>
     <string name="pref_title_extra_controls">Extra controls</string>
     <string name="pref_title_extra_song_info">Song info</string>
+    <string name="pref_title_gapless_playback">Gapless playback</string>
     <string name="pref_title_general_theme">App theme</string>
     <string name="pref_title_home_album_grid_style">Album grid</string>
     <string name="pref_title_home_artist_grid_style">Artist grid</string>
@@ -405,7 +408,6 @@
     <string name="pref_title_open_source_licences">Open source licences</string>
     <string name="pref_title_pause_history">Pause history</string>
     <string name="pref_title_remember_tab">Remember last tab</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">Show lyrics</string>
     <string name="pref_title_suggestions">Show suggestions</string>
     <string name="pref_title_swipe_anywhere_now_playing">Swipe anywhere to change song</string>
@@ -446,13 +448,10 @@
     <string name="restored_previous_purchase_please_restart">Restored previous purchase. Please restart the app to make use of all features.</string>
     <string name="restored_previous_purchases">Restored previous purchases.</string>
     <string name="restoring_purchase">Restoring purchase…</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">The app needs permission to access your device settings in order to set music as Ringtone</string>
     <string name="ringtone_title">Ringtone (Optional)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">File delete failed: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">Can\'t get SAF URI</string>
@@ -503,8 +502,6 @@
     <string name="sort_order_num_songs">Song count</string>
     <string name="sort_order_num_songs_desc">Song count desc</string>
     <string name="sort_order_year">Year</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">Descending</string>
     <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
     <string name="speech_prompt">Search your library</string>
@@ -561,10 +558,4 @@
     <string name="you_have_to_select_at_least_one_category">You have to select at least one category.</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">You will be forwarded to the issue tracker website.</string>
     <string name="your_account_data_is_only_used_for_authentication">Your account data is only used for authentication.</string>
-    <string name="could_not_write_tags_to_file">Could not write tags to the music file!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

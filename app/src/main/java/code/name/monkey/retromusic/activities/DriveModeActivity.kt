@@ -19,7 +19,6 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.activities.base.AbsMusicServiceActivity
 import code.name.monkey.retromusic.databinding.ActivityDriveModeBinding
@@ -96,8 +95,7 @@ class DriveModeActivity : AbsMusicServiceActivity(), Callback {
             } else {
                 repository.insertSongs(listOf(song.toSongEntity(playlist.playListId)))
             }
-            LocalBroadcastManager.getInstance(this@DriveModeActivity)
-                .sendBroadcast(Intent(MusicService.FAVORITE_STATE_CHANGED))
+            sendBroadcast(Intent(MusicService.FAVORITE_STATE_CHANGED))
         }
     }
 

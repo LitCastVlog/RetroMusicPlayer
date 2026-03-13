@@ -17,9 +17,9 @@
     <string name="action_delete_from_device">حذف من الجهاز</string>
     <string name="action_details">تفاصيل</string>
     <string name="action_edit">تعديل</string>
-    <string name="action_go_to_album">انتقل إلى الألبوم</string>
-    <string name="action_go_to_artist">انتقل إلى الفنان</string>
-    <string name="action_go_to_genre">انتقل إلى النوع</string>
+    <string name="action_go_to_album">إنتقل إلى الالبوم</string>
+    <string name="action_go_to_artist">إنتقل إلى الفنان</string>
+    <string name="action_go_to_genre">إنتقل إلى النوع</string>
     <string name="action_go_to_lyrics">انتقل إلى كلمات الأغاني</string>
     <string name="action_go_to_start_directory">انتقل إلى المجلد</string>
     <string name="action_grant">منح</string>
@@ -39,7 +39,7 @@
     <string name="action_save_playing_queue">حفظ قائمة التشغيل الحالية</string>
     <string name="action_scan">فحص</string>
     <string name="action_search">بحث</string>
-    <string name="action_set">بدأ</string>
+    <string name="action_set">بدء</string>
     <string name="action_set_as_ringtone">تعيين كنغمة رنين</string>
     <string name="action_set_as_start_directory">تعيين كملف بداية</string>
     <string name="action_settings">"الإعدادات"</string>
@@ -232,6 +232,7 @@
     <string name="import_playlist">استيراد قائمة التشغيل</string>
     <string name="import_playlist_message">يستورد جميع قوائم التشغيل المدرجة في متجر وسائط الأندرويد مع الأغاني ، إذا كانت قوائم التشغيل موجودة بالفعل ، سيتم دمج الأغاني.</string>
     <string name="inserted_x_songs_into_playlist_x">إدراج %1$d الأغاني في قائمة التشغيل %2$s.</string>
+    <string name="instagram_page_summary">شارك إعداد Retro Music الخاص بك للعرض على إنستقرام</string>
     <string name="keyboard">الكيبورد</string>
     <string name="label_bit_rate">معدل البت</string>
     <string name="label_file_format">الصيغة</string>
@@ -283,13 +284,14 @@
     <string name="no_purchase_found">لم يتم العثور على عملية شراء.</string>
     <string name="no_results">لا يوجد نتائج</string>
     <string name="no_songs">لا يوجد أغاني</string>
-    <string name="no_search_results">لم يتم العثور على نتائج للبحث</string>
     <string name="normal">الافتراضي</string>
     <string name="normal_lyrics">كلمات عادية</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> غير مدرج في مخزن الوسائط]]></string>
     <string name="not_recently_played">لم تشغّل مؤخراً</string>
     <string name="nothing_to_scan">لاشيء لفحصه.</string>
     <string name="nothing_to_see">لاشيء لفحصه</string>
+    <string name="notification">إشعارات</string>
+    <string name="notification_settings_summary">تخصيص نمط الإشعارات</string>
     <string name="now_playing">تشغيل الان</string>
     <string name="now_playing_queue">تسلسل التشغيل الان</string>
     <string name="now_playing_summary">تخصيص شاشة التشغيل الآن</string>
@@ -342,8 +344,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">ايقاف عند الصفر</string>
     <string name="pref_keep_screen_on_summary">ضع في اعتبارك أن تمكين هذه الميزة قد يؤثر على عمر البطارية</string>
     <string name="pref_keep_screen_on_title">ابقاء الشاشة تعمل</string>
-    <string name="pref_show_when_locked_summary">يتطلب إعادة تشغيل التطبيق ليعمل. يجب أن يكون المشغل في المقدمة قبل القفل لتعمل هذه الميزة</string>
-    <string name="pref_show_when_locked_title">إظهار واجهة المشغل عند القفل</string>
     <string name="pref_language_name">حدد اللغة</string>
     <string name="pref_snow_fall_title">تأثير سقوط الثلوج</string>
     <string name="pref_summary_album_art_on_lockscreen">استخدم غلاف ألبوم الأغنية قيد التشغيل حاليًا كخلفية لشاشة القفل</string>
@@ -354,6 +354,7 @@
     <string name="pref_summary_bluetooth_playback">بدء التشغيل بمجرد توصيل جهاز بلوتوث</string>
     <string name="pref_summary_blurred_album_art">ظبابية غطاء الألبوم على شاشة القفل . يمكن أن يسبب مشاكل في تطبيقات وويدجت الطرف الثالث</string>
     <string name="pref_summary_carousel_effect">التأثير الدائري لصورة الألبوم في شاشة التشغيل الآن. لاحظ أن مواضيع البطاقة و البطاقة الضبابية لن تعمل</string>
+    <string name="pref_summary_classic_notification">أستخدم تصميم الإشعارات التقليدي</string>
     <string name="pref_summary_colored_app">تتغير ألوان أزرار الخلفية والتحكم وفقًا لصورة الألبوم من شاشة التشغيل الآن</string>
     <string name="pref_summary_colored_app_shortcuts">تلوين اختصارات التطبيق باللون الثانوي . في كل مرة تقوم فيها بتغيير اللون ، يرجى تفعيل هذا الخيار ليتم تطبيق التغييرات</string>
     <string name="pref_summary_colored_notification">"تلوين الإشعارات في غلاف الألبوم\u2019لون نشط"</string>
@@ -362,6 +363,7 @@
     <string name="pref_summary_expand_now_playing_panel">النقر على الإشعار سيظهر الآن مايتم تشغيله بدلاً من الشاشة الرئيسية لتطبيق</string>
     <string name="pref_summary_extra_controls">اضافة المزيد من التحكم في المشغل المصغر</string>
     <string name="pref_summary_extra_song_info">إظهار معلومات الأغنية الإضافية، مثل تنسيق الملف، معدل البت، والتواتر</string>
+    <string name="pref_summary_gapless_playback">"يمكن أن يسبب مشاكل في التشغيل على بعض الأجهزة."</string>
     <string name="pref_summary_home_banner">تفعيل وضع البانر في الشاشة الرئيسية</string>
     <string name="pref_summary_ignore_media_store_artwork">يمكنك أن تزيد من جودة غلاف الألبوم ، لكنه يسبب بطئ في التحميل للصور. قم بتمكين هذا فقط إذا كنت تواجه مشاكل مع صور ألبومات منخفضة الدقة</string>
     <string name="pref_summary_library_categories">تكوين وعرض وترتيب فئات المكتبة.</string>
@@ -370,7 +372,6 @@
     <string name="pref_summary_open_source_licences">الرخصة والتفاصيل للبرمجيات مفتوحة المصدر</string>
     <string name="pref_summary_pause_history">عند التمكين، لن تظهر الأغاني المشغلة حديثا في المحفوظات</string>
     <string name="pref_summary_remember_tab">الانتقال إلى آخر علامة تبويب مستخدمة عند البدء</string>
-    <string name="pref_summary_enable_search_playlist">إظهار حقل البحث في قائمة التشغيل</string>
     <string name="pref_summary_show_lyrics">عرض كلمات الأغاني المتزامنة على غلاف الألبوم</string>
     <string name="pref_summary_suggestions">إظهار خليط موسيقي جديد على الشاشة الرئيسية</string>
     <string name="pref_summary_swipe_anywhere_now_playing">تمكين تغيير الأغنية بالسحب في أي مكان على الشاشة المشغلة الآن</string>
@@ -394,6 +395,7 @@
     <string name="pref_title_bluetooth_playback">تشغيل البلوتوث</string>
     <string name="pref_title_blurred_album_art">تضبيب صورة الالبوم</string>
     <string name="pref_title_circle_button">زر التشغيل الدائري</string>
+    <string name="pref_title_classic_notification">تصميم التنبيهات الكلاسيكي</string>
     <string name="pref_title_colored_app">اللون المتكيف</string>
     <string name="pref_title_colored_notification">التنبيهات الملونة</string>
     <string name="pref_title_cross_fade">التلاشي (تجريبي)</string>
@@ -402,6 +404,7 @@
     <string name="pref_title_expand_now_playing_panel">إظهار شاشة التشغيل</string>
     <string name="pref_title_extra_controls">المزيد من أزرار التحكم</string>
     <string name="pref_title_extra_song_info">معلومات الأغنية</string>
+    <string name="pref_title_gapless_playback">تشغيل متتابع</string>
     <string name="pref_title_general_theme">سمات التطبيق</string>
     <string name="pref_title_home_album_grid_style">صورة الألبوم</string>
     <string name="pref_title_home_artist_grid_style">شبكة الفنان الرئيسية</string>
@@ -416,7 +419,6 @@
     <string name="pref_title_open_source_licences">التراخيص مفتوحة المصدر</string>
     <string name="pref_title_pause_history">إيقاف السجل المؤقت</string>
     <string name="pref_title_remember_tab">تذكر التبويب الأخير</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">عرض كلمات الأغاني</string>
     <string name="pref_title_suggestions">عرض الاقتراحات</string>
     <string name="pref_title_swipe_anywhere_now_playing">اسحب في أي مكان لتغيير الأغنية</string>
@@ -457,13 +459,10 @@
     <string name="restored_previous_purchase_please_restart">تم استرداد عملية الشراء السابقة. الرجاء اعادة تشغيل التطبيق الاستمتاع بكافة المميزات.</string>
     <string name="restored_previous_purchases">تم </string>
     <string name="restoring_purchase">استرداد عملية الشراء...</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">مشغل الموسيقى Retro</string>
     <string name="retro_music_pro">ريترو ميوزك - الكامل</string>
     <string name="ringtone_summary">يحتاج التطبيق إلى إذن للوصول إلى إعدادات جهازك من أجل تعيين الموسيقى كنغمة رنين</string>
     <string name="ringtone_title">نغمة الرنين (إختياري)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">فشل حذف الملف: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">لا يمكن الحصول على URI SAF</string>
@@ -514,8 +513,6 @@
     <string name="sort_order_num_songs">عدد الأغاني</string>
     <string name="sort_order_num_songs_desc">العد التنازلي للاغنية</string>
     <string name="sort_order_year">السنة</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">تنازلي</string>
     <string name="speech_not_supported">عذرا! جهازك لايدعم الادخال الصوتي</string>
     <string name="speech_prompt">أبحث في مكتبتك</string>
@@ -572,10 +569,4 @@
     <string name="you_have_to_select_at_least_one_category">عليك اختيار فئة واحدة على الأقل.</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">سيتم تحويلك الى صفحة سجل الاخطاء</string>
     <string name="your_account_data_is_only_used_for_authentication">بيانات حسابك تستخدم لتوثيق فقط.</string>
-    <string name="could_not_write_tags_to_file">تعذر كتابة العلامات إلى ملف الموسيقى!</string>
-    <string name="sleep_timer_no_permission">لا يوجد إذن لجدولة التنبيهات، يرجى السماح لـ Retro Music.</string>
-    <string name="scanning_folders_files">جارٍ فحص المجلدات والملفات…</string>
-    <string name="scan_complete">اكتمل المسح: %1$d تم العثور على وسائط صوتية.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

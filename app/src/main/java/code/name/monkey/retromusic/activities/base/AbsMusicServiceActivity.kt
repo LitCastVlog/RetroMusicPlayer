@@ -20,7 +20,6 @@ import android.os.Bundle
 import android.os.IBinder
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.db.toPlayCount
@@ -67,8 +66,8 @@ abstract class AbsMusicServiceActivity : AbsBaseActivity(), IMusicServiceEventLi
     override fun onDestroy() {
         super.onDestroy()
         MusicPlayerRemote.unbindFromService(serviceToken)
-        if (receiverRegistered && musicStateReceiver != null) {
-            LocalBroadcastManager.getInstance(this).unregisterReceiver(musicStateReceiver!!)
+        if (receiverRegistered) {
+            unregisterReceiver(musicStateReceiver)
             receiverRegistered = false
         }
     }
@@ -98,7 +97,7 @@ abstract class AbsMusicServiceActivity : AbsBaseActivity(), IMusicServiceEventLi
             filter.addAction(MEDIA_STORE_CHANGED)
             filter.addAction(FAVORITE_STATE_CHANGED)
 
-            LocalBroadcastManager.getInstance(this).registerReceiver(musicStateReceiver!!, filter)
+            ContextCompat.registerReceiver(this, musicStateReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
             receiverRegistered = true
         }
 
@@ -108,8 +107,8 @@ abstract class AbsMusicServiceActivity : AbsBaseActivity(), IMusicServiceEventLi
     }
 
     override fun onServiceDisconnected() {
-        if (receiverRegistered && musicStateReceiver != null) {
-            LocalBroadcastManager.getInstance(this).unregisterReceiver(musicStateReceiver!!)
+        if (receiverRegistered) {
+            unregisterReceiver(musicStateReceiver)
             receiverRegistered = false
         }
 
@@ -177,7 +176,7 @@ abstract class AbsMusicServiceActivity : AbsBaseActivity(), IMusicServiceEventLi
             "from_permissions_changed",
             true
         ) // just in case we need to know this at some point
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+        sendBroadcast(intent)
         logD("sendBroadcast $hasPermissions")
     }
 

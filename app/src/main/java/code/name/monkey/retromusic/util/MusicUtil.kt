@@ -1,7 +1,6 @@
 package code.name.monkey.retromusic.util
 
 import android.content.ContentUris
-import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
@@ -10,6 +9,7 @@ import android.provider.BaseColumns
 import android.provider.MediaStore
 import android.util.Log
 import androidx.core.content.FileProvider
+import androidx.core.content.contentValuesOf
 import androidx.core.net.toUri
 import androidx.fragment.app.FragmentActivity
 import code.name.monkey.appthemehelper.util.VersionUtils
@@ -325,23 +325,17 @@ object MusicUtil : KoinComponent {
     fun insertAlbumArt(
         context: Context,
         albumId: Long,
-        path: String?
+        path: String?,
     ) {
         val contentResolver = context.contentResolver
         val artworkUri = "content://media/external/audio/albumart".toUri()
         contentResolver.delete(ContentUris.withAppendedId(artworkUri, albumId), null, null)
-
-        val values = ContentValues().apply {
-            put("album_id", albumId)
-            put("_data", path)
-        }
-
-        try {
-            contentResolver.insert(artworkUri, values)
-            contentResolver.notifyChange(artworkUri, null)
-        } catch (e: IllegalArgumentException) {
-           Log.e("MusicUtil", "Failed to insert album art", e)
-        }
+        val values = contentValuesOf(
+            "album_id" to albumId,
+            "_data" to path
+        )
+        contentResolver.insert(artworkUri, values)
+        contentResolver.notifyChange(artworkUri, null)
     }
 
     fun isArtistNameUnknown(artistName: String?): Boolean {
@@ -488,8 +482,7 @@ object MusicUtil : KoinComponent {
                     val id: Int = cursor.getInt(0)
                     val name: String = cursor.getString(1)
                     try { // File.delete can throw a security exception
-                        val f = File(name)
-                        if (f.delete()) {
+                        if (SAFUtil.delete(context, name, null)) {
                             // Step 3: Remove selected track from the database
                             context.contentResolver.delete(
                                 ContentUris.withAppendedId(
@@ -499,8 +492,6 @@ object MusicUtil : KoinComponent {
                             )
                             deletedCount++
                         } else {
-                            // I'm not sure if we'd ever get here (deletion would
-                            // have to fail, but no exception thrown)
                             Log.e("MusicUtils", "Failed to delete file $name")
                         }
                         cursor.moveToNext()

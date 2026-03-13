@@ -10,7 +10,6 @@
  * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
- *
  */
 package code.name.monkey.retromusic.extensions
 
@@ -184,6 +183,23 @@ fun BottomSheetBehavior<*>.peekHeightAnimate(value: Int): Animator {
             duration = ANIM_DURATION
             start()
         }
+}
+
+fun MaterialCardView.animateRadius(cornerRadius: Float, pause: Boolean = true) {
+    ValueAnimator.ofFloat(radius, cornerRadius).apply {
+        addUpdateListener { radius = animatedValue as Float }
+        start()
+    }
+    ValueAnimator.ofInt(measuredWidth, if (pause) (height * 1.5).toInt() else height).apply {
+        addUpdateListener {
+            updateLayoutParams<ViewGroup.LayoutParams> { width = animatedValue as Int }
+        }
+        start()
+    }
+}
+
+fun MaterialCardView.animateToCircle() {
+    animateRadius(measuredHeight / 2F, pause = false)
 }
 
 fun View.focusAndShowKeyboard() {

@@ -69,7 +69,9 @@ abstract class AbsBaseActivity : AbsThemeActivity() {
         val hasPermissions = hasPermissions()
         if (hasPermissions != hadPermissions) {
             hadPermissions = hasPermissions
-            onHasPermissionsChanged(hasPermissions)
+            if (VersionUtils.hasMarshmallow()) {
+                onHasPermissionsChanged(hasPermissions)
+            }
         }
     }
 

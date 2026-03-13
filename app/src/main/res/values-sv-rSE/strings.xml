@@ -221,6 +221,7 @@
     <string name="import_playlist">Import playlist</string>
     <string name="import_playlist_message">It imports all playlists listed in the Android Media Store with songs, if the playlists already exists, the songs will get merged.</string>
     <string name="inserted_x_songs_into_playlist_x">La till %1$d låtar i spellistan %2$s.</string>
+    <string name="instagram_page_summary">Dela din Retro Music-setup för att visa upp på Instagram</string>
     <string name="keyboard">Tangentbord</string>
     <string name="label_bit_rate">Bitrate</string>
     <string name="label_file_format">Format</string>
@@ -272,13 +273,14 @@
     <string name="no_purchase_found">Inget köp hittades.</string>
     <string name="no_results">Inga resultat</string>
     <string name="no_songs">Du har inga låtar</string>
-    <string name="no_search_results">No search results</string>
     <string name="normal">Normal</string>
     <string name="normal_lyrics">Normal låttext</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> är inte listad i Media Store.]]></string>
     <string name="not_recently_played">Not recently played</string>
     <string name="nothing_to_scan">Inget att skanna.</string>
     <string name="nothing_to_see">Ingenting att se</string>
+    <string name="notification">Notis</string>
+    <string name="notification_settings_summary">Anpassa utseendet på notisen</string>
     <string name="now_playing">Spelare</string>
     <string name="now_playing_queue">Spelkö</string>
     <string name="now_playing_summary">Anpassa spelarskärmen</string>
@@ -331,8 +333,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">Pausa på noll</string>
     <string name="pref_keep_screen_on_summary">Tänk på att aktivering av den här funktionen kan påverka batteritiden</string>
     <string name="pref_keep_screen_on_title">Håll skärmen på</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">Välj språk</string>
     <string name="pref_snow_fall_title">Snow fall effect</string>
     <string name="pref_summary_album_art_on_lockscreen">Använd det spelade albumets omslag som låsskärmsbakgrund</string>
@@ -343,6 +343,7 @@
     <string name="pref_summary_bluetooth_playback">Börja spela direkt när en bluetooth-enhet ansluts</string>
     <string name="pref_summary_blurred_album_art">Ger albumomslaget oskärpa på låsskärmen. Kan orsaka problem med tredjepartsappar och widgets</string>
     <string name="pref_summary_carousel_effect">Karuselleffekt för albumomslag på spelarskärmen. Observera att kort- och oskärpa-teman inte kommer att fungera</string>
+    <string name="pref_summary_classic_notification">Använd den klassiska notissdesignen</string>
     <string name="pref_summary_colored_app">Bakgrunds- och kontrollknapparnas färger ändras enligt albumomslaget från spelarskärmen</string>
     <string name="pref_summary_colored_app_shortcuts">Färgar appens genvägar i accentfärgen. Se till att aktivera detta varje gång du ändrar färg, för att ändringen ska träda i kraft</string>
     <string name="pref_summary_colored_notification">"Färgar notisen i albumomslagets framträdande färg"</string>
@@ -351,6 +352,7 @@
     <string name="pref_summary_expand_now_playing_panel">När du klickar på notisen visas spelarskärmen istället för hemskärmen</string>
     <string name="pref_summary_extra_controls">Lägg till extra kontroller för minispelaren</string>
     <string name="pref_summary_extra_song_info">Visa extra låtinformation, till exempel filformat, bitrate och frekvens</string>
+    <string name="pref_summary_gapless_playback">"Kan orsaka uppspelningsproblem på vissa enheter."</string>
     <string name="pref_summary_home_banner">Visar en banner på hemfliken</string>
     <string name="pref_summary_ignore_media_store_artwork">Kan öka albumomslagens kvalitet, men orsakar långsammare laddningstider för bilder. Aktivera endast om du har problem med lågupplösta bilder</string>
     <string name="pref_summary_library_categories">Konfigurera synlighet och ordning för bibliotekskategorier.</string>
@@ -359,7 +361,6 @@
     <string name="pref_summary_open_source_licences">Licensinformation för programvara med öppen källkod</string>
     <string name="pref_summary_pause_history">When enabled, newly played songs won\'t show in history</string>
     <string name="pref_summary_remember_tab">Navigate to the last used tab on start</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">Display synced lyrics over album cover</string>
     <string name="pref_summary_suggestions">Show New Music Mix on homescreen</string>
     <string name="pref_summary_swipe_anywhere_now_playing">Enables changing song by swiping anywhere on the now playing screen</string>
@@ -383,6 +384,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth-uppspelning</string>
     <string name="pref_title_blurred_album_art">Oskärpa hos albumomslaget</string>
     <string name="pref_title_circle_button">Circular play button</string>
+    <string name="pref_title_classic_notification">Klassisk notisssdesign</string>
     <string name="pref_title_colored_app">Adaptiv färg</string>
     <string name="pref_title_colored_notification">Färgad notis</string>
     <string name="pref_title_cross_fade">Crossfade (Beta)</string>
@@ -391,6 +393,7 @@
     <string name="pref_title_expand_now_playing_panel">Öppna spelaren</string>
     <string name="pref_title_extra_controls">Extra kontroller</string>
     <string name="pref_title_extra_song_info">Låtinfo</string>
+    <string name="pref_title_gapless_playback">Sömlös uppspelning</string>
     <string name="pref_title_general_theme">Apptema</string>
     <string name="pref_title_home_album_grid_style">Album grid</string>
     <string name="pref_title_home_artist_grid_style">Artistruntnät för hem</string>
@@ -405,7 +408,6 @@
     <string name="pref_title_open_source_licences">Licenser för öppen källkod</string>
     <string name="pref_title_pause_history">Pause history</string>
     <string name="pref_title_remember_tab">Remember last tab</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">Show lyrics</string>
     <string name="pref_title_suggestions">Show suggestions</string>
     <string name="pref_title_swipe_anywhere_now_playing">Swipe anywhere to change song</string>
@@ -446,13 +448,10 @@
     <string name="restored_previous_purchase_please_restart">Återställde tidigare köp. Starta om appen för att använda alla funktioner.</string>
     <string name="restored_previous_purchases">Återställde tidigare köp.</string>
     <string name="restoring_purchase">Återställer köp…</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">The app needs permission to access your device settings in order to set music as Ringtone</string>
     <string name="ringtone_title">Ringtone (Optional)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">Radering av fil misslyckades: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">Kan inte hämta SAF URI</string>
@@ -503,8 +502,6 @@
     <string name="sort_order_num_songs">Song count</string>
     <string name="sort_order_num_songs_desc">Song count desc</string>
     <string name="sort_order_year">År</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">Sjunkande</string>
     <string name="speech_not_supported">Hoppsan! Din enhet stöder inte talinmatning</string>
     <string name="speech_prompt">Sök i ditt bibliotek</string>
@@ -561,10 +558,4 @@
     <string name="you_have_to_select_at_least_one_category">Du måste välja minst en kategori.</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">You will be forwarded to the issue tracker website.</string>
     <string name="your_account_data_is_only_used_for_authentication">Dina kontodata används endast för verifiering.</string>
-    <string name="could_not_write_tags_to_file">Could not write tags to the music file!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

@@ -17,10 +17,8 @@ package code.name.monkey.retromusic.activities.tageditor
 import android.app.Activity
 import android.app.SearchManager
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -38,7 +36,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.R.drawable
 import code.name.monkey.retromusic.activities.base.AbsBaseActivity
 import code.name.monkey.retromusic.extensions.accentColor
 import code.name.monkey.retromusic.extensions.colorButtons
@@ -343,7 +340,7 @@ abstract class AbsTagEditorActivity<VB : ViewBinding> : AbsBaseActivity() {
 
     protected fun setImageBitmap(bitmap: Bitmap?, bgColor: Int) {
         if (bitmap == null) {
-            editorImage.setImageResource(drawable.default_audio_art)
+            editorImage.setImageResource(R.drawable.default_audio_art)
         } else {
             editorImage.setImageBitmap(bitmap)
         }
@@ -352,7 +349,6 @@ abstract class AbsTagEditorActivity<VB : ViewBinding> : AbsBaseActivity() {
 
     protected open fun setColors(color: Int) {
         paletteColorPrimary = color
-        saveFab.backgroundTintList = ColorStateList.valueOf(if (color == 0) Color.GRAY else color)
     }
 
     protected fun writeValuesToFiles(

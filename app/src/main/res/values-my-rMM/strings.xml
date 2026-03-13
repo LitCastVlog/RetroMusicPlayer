@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_album_label">အကြောင်း %s</string>
+    <string name="about_album_label">About %s</string>
     <string name="about_settings_summary">အဖွဲ့နှင့် လူမှုကွန်ယက်လင့်ခ်များ</string>
     <string name="accent_color">Accent Color</string>
     <string name="accent_color_desc">The theme accent color (ခရမ်းရောင်သည်မူလအရောင်)</string>
-    <string name="action_about">အကြောင်း</string>
-    <string name="action_add_to_blacklist">Blacklist သို့ထည့်မယ်</string>
+    <string name="action_about">About</string>
+    <string name="action_add_to_blacklist">Add to Blacklist</string>
     <string name="action_add_to_favorites">အကြိုက်ဆုံးသို့ထည့်မည်</string>
     <string name="action_add_to_playing_queue">နားထောင်နေသည့်စာရင်းထဲသို့ထည့်မည်</string>
     <string name="action_add_to_playlist">Playlist သို့ထည့်မည်</string>
     <string name="action_cancel">ပယ်ဖျက်မည်</string>
-    <string name="action_cast">လွှင့်မည်</string>
+    <string name="action_cast">Cast</string>
     <string name="action_clear_playing_queue">နားထောင်နေသည့်စာရင်းအားရှင်းမည်</string>
-    <string name="action_cycle_repeat">ပြန်ပြီးထပ်ခါထပ်ခါ</string>
+    <string name="action_cycle_repeat">Cycle repeat mode</string>
     <string name="action_delete">ဖျက်မည်</string>
     <string name="action_delete_from_device">Device မှဖျက်မည်</string>
     <string name="action_details">အသေးစိတ်</string>
-    <string name="action_edit">ပြင်ဆင်ရန်</string>
+    <string name="action_edit">Edit</string>
     <string name="action_go_to_album">Album သို့သွားမည်</string>
     <string name="action_go_to_artist">အဆိုတော်သို့သွားမည်</string>
     <string name="action_go_to_genre">အမျိုးအစားသို့သွားမည်</string>
-    <string name="action_go_to_lyrics">သီချင်းစာသားသို့</string>
+    <string name="action_go_to_lyrics">Go to Lyrics</string>
     <string name="action_go_to_start_directory">Directory အစသို့သွားမည်</string>
     <string name="action_grant">ခွင့်ပြုမည်</string>
     <string name="action_grid_size">အကွက်အရွယ်အစား</string>
@@ -29,7 +29,7 @@
     <string name="action_next">နောက်တစ်ပုဒ်</string>
     <string name="action_play">Play မည်</string>
     <string name="action_play_all">အားလုံး play မည်</string>
-    <string name="action_play_next">နောက်တစ်ပုဒ်</string>
+    <string name="action_play_next">Play next</string>
     <string name="action_play_pause">Play/ခေတ္တရပ်</string>
     <string name="action_previous">ယခင်အပုဒ်</string>
     <string name="action_remove_from_favorites">အကြိုက်ဆုံးမှထုတ်မည်</string>
@@ -42,50 +42,50 @@
     <string name="action_set">စမည်</string>
     <string name="action_set_as_ringtone">Ringtone အဖြစ်ထားမည်</string>
     <string name="action_set_as_start_directory">Directory အစအဖြစ်ထားမည်</string>
-    <string name="action_settings">"ချိန်ညှိခြင်း"</string>
+    <string name="action_settings">"Settings"</string>
     <string name="action_share">မျှဝေမည်</string>
     <string name="action_shuffle_all">အားလုံး Shuffle play မည်</string>
     <string name="action_shuffle_playlist">Playlist အား Shuffle play မည်</string>
     <string name="action_sleep_timer">Sleep Timer</string>
     <string name="action_sort_order">အထားအသိုပြင်မည်</string>
     <string name="action_tag_editor">Tag တည်းဖြတ်ခြင်း</string>
-    <string name="action_toggle_favorite">ကြိုက်ရာခလုတ်များ</string>
-    <string name="action_toggle_shuffle">သီချင်းကျရာရာခလုတ်</string>
-    <string name="adaptive">လိုက်ဖက်အောင်ပြင်ဆင်ပေးသည်</string>
+    <string name="action_toggle_favorite">Toggle favorite</string>
+    <string name="action_toggle_shuffle">Toggle shuffle mode</string>
+    <string name="adaptive">Adaptive</string>
     <string name="add_action">ထည့်မည်</string>
     <string name="add_playlist_title">"အောက်ပါ Playlist သို့ထည့်မည်"</string>
-    <string name="add_time_framed_lryics">အချိန်ကိုက်သီချင်းစာသားထည့်ရန်</string>
-    <string name="added_song_count_to_playlist">%2$s သို့ %1$d သီချင်း(များ) ထည့်ပြီး</string>
+    <string name="add_time_framed_lryics">Add Time Framed Lyrics</string>
+    <string name="added_song_count_to_playlist">Added %1$d song(s) to %2$s</string>
     <string name="added_title_to_playing_queue">"နားထောင်နေသည့်စာရင်းထဲသို့ ၁ ပုဒ်ပေါင်းထည့်ခဲ့သည်"</string>
     <string name="added_x_titles_to_playing_queue">နားထောင်နေသည့်စာရင်းထဲသို့ %1$d ပုဒ်ပေါင်းထည့်ခဲ့သည်</string>
-    <string name="album">အယ်လ်ဘမ်</string>
+    <string name="album">Album</string>
     <plurals name="albumSongs">
         <item quantity="other">သီချင်းများ</item>
     </plurals>
-    <string name="album_artist">အယ်လ်ဘမ်အဆိုတော်</string>
-    <string name="albums">အယ်လ်ဘမ်များ</string>
+    <string name="album_artist">Album Artist</string>
+    <string name="albums">Albums</string>
     <plurals name="albums">
-        <item quantity="other">အယ်လ်ဘမ်များ</item>
+        <item quantity="other">Albums</item>
     </plurals>
-    <string name="always">အမြဲတမ်း</string>
+    <string name="always">Always</string>
     <string name="app_share">ဟေ့ အရမ်းမိုက်တဲ့ဒီ Music Player ကိုတစ်ချက်ကြည့်ကြည့်! https://play.google.com/store/apps/details?id=%s</string>
-    <string name="app_shortcut_shuffle_all_short">ကျရာ</string>
+    <string name="app_shortcut_shuffle_all_short">Shuffle</string>
     <string name="app_shortcut_top_tracks_short">ထိပ်ဆုံးသီချင်းများ</string>
-    <string name="app_widget_big_name">ဓာတ်ပုံအပြည့်</string>
+    <string name="app_widget_big_name">Full Image</string>
     <string name="app_widget_card_name">ကတ်</string>
     <string name="app_widget_classic_name">ရိုးရိုး</string>
     <string name="app_widget_md3_name">MD3</string>
     <string name="app_widget_small_name">အသေး</string>
-    <string name="app_widget_text_name">အရှင်းဆုံးစာသား</string>
+    <string name="app_widget_text_name">Minimal Text</string>
     <string name="artist">အဆိုတော်</string>
     <string name="artists">အဆိုတော်များ</string>
-    <string name="audio_fade_duration">အသံတိုးသွားချိန်</string>
+    <string name="audio_fade_duration">Audio fade duration</string>
     <string name="audio_focus_denied">အသံအာရုံစိုက်ခြင်းအား ပယ်ဖျက်ခဲ့သည်</string>
     <string name="audio_settings_summary">အသံ Settings များပြောင်းလဲရန်နှင့် Equalizer ချိန်ညှိရန်</string>
     <string name="auto">အလိုအလျောက်</string>
-    <string name="backup_restore_settings_summary">အရန်သိမ်းထားမည် နှင့် သင်၏ချိန်ညှိခြင်းများ၊သီချင်းစာရင်းများ ပြန်လည်ထည့်ရန်</string>
-    <string name="backup_restore_title"><![CDATA[အရန်သိမ်းမည် & ပြန်လည်ကူးယူမည်]]></string>
-    <string name="backup_title">အရန်သိမ်းစည်းခြင်း</string>
+    <string name="backup_restore_settings_summary">Backup and restore your settings, playlists</string>
+    <string name="backup_restore_title"><![CDATA[Backup & Restore]]></string>
+    <string name="backup_title">Backups</string>
     <string name="biography">အတ္ထုပတ္တိ</string>
     <string name="black_theme_name">အနက်ရောင်သာ</string>
     <string name="blacklist">လစ်လျူရှုမည့်စာရင်း</string>
@@ -219,6 +219,7 @@
     <string name="import_playlist">Import playlist</string>
     <string name="import_playlist_message">Android မီဒီယာစတိုးမှ Playlist များကိုသီချင်းများနှင့်အတူ import လုပ်သွားမည်ဖြစ်ပြီး ရှိပြီးသား Playlist ဖြစ်ပါကသီချင်းများကိုထည့်ပေါင်းသွားပါမည်။</string>
     <string name="inserted_x_songs_into_playlist_x">Playlist %2$s သို့သီချင်း %1$d ပုဒ်ထည့်ပြီးပါပြီ</string>
+    <string name="instagram_page_summary">သင့်ရဲ့ Retro Music setup ကို Instagram တွင်ပြသလိုက်ပါ</string>
     <string name="keyboard">ကီးဘုတ်</string>
     <string name="label_bit_rate">Bitrate</string>
     <string name="label_file_format">အမျိုးအစား</string>
@@ -270,13 +271,14 @@
     <string name="no_purchase_found">ဝယ်ယူထားမှုမရှိပါ</string>
     <string name="no_results">ရှာမတွေ့ပါ</string>
     <string name="no_songs">သီချင်းတစ်ပုဒ်မှမရှိပါ</string>
-    <string name="no_search_results">No search results</string>
     <string name="normal">ပုံမှန်</string>
     <string name="normal_lyrics">ပုံမှန်သီချင်းစာသား</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> သည် Android မီဒီယာစတိုးတွင် မရှိပါ]]></string>
     <string name="not_recently_played">မကြာသေးခင်က play မထားပါ</string>
     <string name="nothing_to_scan">စကန်ဖတ်စရာမရှိပါ</string>
     <string name="nothing_to_see">ကြည့်စရာတစ်ခုမှမရှိပါ</string>
+    <string name="notification">Notification</string>
+    <string name="notification_settings_summary">Notification ပုံစံကို စိတ်ကြိုက်ပြင်ဆင်မည်</string>
     <string name="now_playing">Now playing</string>
     <string name="now_playing_queue">Now playing queue</string>
     <string name="now_playing_summary">Now playing screen ကိုစိတ်ကြိုက်ပြင်ခြင်း</string>
@@ -329,8 +331,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">သုည၌ရပ်ခြင်း</string>
     <string name="pref_keep_screen_on_summary">ဤ feature ဖွင့်ထားပါက ဘက်ထရီသက်တမ်းထိခိုက်နိုင်ပါသည်</string>
     <string name="pref_keep_screen_on_title">Screen တစ်ချိန်လုံးဖွင့်ထားမည်</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">ဘာသာစကားရွေးချယ်မည်</string>
     <string name="pref_snow_fall_title">Snow fall effect</string>
     <string name="pref_summary_album_art_on_lockscreen">ယခု play နေသောသီချင်း Album cover ပုံအား Lockscreen wallpaper အဖြစ်ထားမည်</string>
@@ -341,6 +341,7 @@
     <string name="pref_summary_bluetooth_playback">Bluetooth device နှင့်ချိတ်ဆက်လိုက်သည်နှင့် သီချင်းစဖွင့်မည်</string>
     <string name="pref_summary_blurred_album_art">Lockscreen တွင် Album cover ပုံကိုဝါးထားမည်။ Third-party app နှင့် Widget များတွင် ပြဿနာတက်နိုင်သည်။</string>
     <string name="pref_summary_carousel_effect">Now Playing screen မှ Album cover အတွက် Carousel effect ဖြစ်သည်။ ဤ effect ကြောင့် ကတ်နှင့် ကတ်အဝါး Theme များအလုပ်လုပ်မည်မဟုတ်ပါ။</string>
+    <string name="pref_summary_classic_notification">Android ၏ Notification ဒီဇိုင်းအဟောင်းကိုသုံးမည်</string>
     <string name="pref_summary_colored_app">နောက်ခံအရောင်နှင့်ထိန်းချုပ်ခလုတ်အရောင်များသည် Now Playing screen မှ Album cover အရောင်အတိုင်း ပြောင်းလဲပါမည်</string>
     <string name="pref_summary_colored_app_shortcuts">Accent color မှ App shortcuts များကိုအရောင်ပြောင်းလဲသည်။ Accent color ပြောင်းသည့်အခါတိုင်း App ကိုသက်ရောက်မှုရှိစေရန် ဤခလုတ်ကိုအဖွင့်၊အပိတ်လုပ်ပေးပါ။</string>
     <string name="pref_summary_colored_notification">"Notification အရောင်ကို Album cover မှထင်ရှားသည့်အရောင်အတိုင်း ပြောင်းမည်"</string>
@@ -349,6 +350,7 @@
     <string name="pref_summary_expand_now_playing_panel">Notification ကိုနှိပ်သည့်အခါ Home screen သို့ရောက်မည့်အစား Now Playing screen သို့တိုက်ရိုက်ရောက်သွားမည်</string>
     <string name="pref_summary_extra_controls">Mini player တွင် ထိန်းချုပ်ခလုတ်အပိုများထပ်ပေါင်းမည်</string>
     <string name="pref_summary_extra_song_info">သီချင်းဖိုင်၏အသေးစိတ်အချက်အလက်များ ပြသမည်၊ ဥပမာ - ဖိုင်အမျိုးအစား၊ bitrate နှင့် ကြိမ်နှုန်း</string>
+    <string name="pref_summary_gapless_playback">"အချို့ device များတွင် playback ပြဿနာများဖြစ်ပေါ်နိုင်သည်"</string>
     <string name="pref_summary_home_banner">Home banner အား ပြသခြင်း၊ ဖျောက်ထားခြင်း</string>
     <string name="pref_summary_ignore_media_store_artwork">Album cover အရည်အသွေးပိုမိုကောင်းမွန်လာနိုင်သော်လည်း Loading time ပိုကြာနိုင်သည်။ အရည်အသွေးနိမ့်သောပုံများနှင့်အဆင်မပြေမှသာလျှင် ဤခလုတ်ကိုဖွင့်ပါ။</string>
     <string name="pref_summary_library_categories">Library category များ ဖော်ခြင်း၊ ဖျောက်ခြင်းနှင့် အထားအသိုများ ချိန်ညှိမည်</string>
@@ -357,7 +359,6 @@
     <string name="pref_summary_open_source_licences">Open Source software အတွက် လိုင်စင်အချက်အလက်များ</string>
     <string name="pref_summary_pause_history">When enabled, newly played songs won\'t show in history</string>
     <string name="pref_summary_remember_tab">Navigate to the last used tab on start</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">Display synced lyrics over album cover</string>
     <string name="pref_summary_suggestions">Show New Music Mix on homescreen</string>
     <string name="pref_summary_swipe_anywhere_now_playing">Enables changing song by swiping anywhere on the now playing screen</string>
@@ -381,6 +382,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth playback</string>
     <string name="pref_title_blurred_album_art">Album cover အဝါး</string>
     <string name="pref_title_circle_button">Circular play button</string>
+    <string name="pref_title_classic_notification">Notification ဒီဇိုင်းအဟောင်း</string>
     <string name="pref_title_colored_app">Adaptive color</string>
     <string name="pref_title_colored_notification">အရောင်ပါသော notification</string>
     <string name="pref_title_cross_fade">Crossfade (Beta)</string>
@@ -389,6 +391,7 @@
     <string name="pref_title_expand_now_playing_panel">Now Playing screen ပြသခြင်း</string>
     <string name="pref_title_extra_controls">အပိုထိန်းချုပ်မှုများ</string>
     <string name="pref_title_extra_song_info">သီချင်းဖိုင်အချက်အလက် </string>
+    <string name="pref_title_gapless_playback">လစ်ဟာမှုမရှိ play ခြင်း</string>
     <string name="pref_title_general_theme">App theme</string>
     <string name="pref_title_home_album_grid_style">Album အကွက်ပုံစံ</string>
     <string name="pref_title_home_artist_grid_style">အဆိုတော်အကွက်ပုံစံ</string>
@@ -403,7 +406,6 @@
     <string name="pref_title_open_source_licences">Open source licences</string>
     <string name="pref_title_pause_history">Pause history</string>
     <string name="pref_title_remember_tab">Remember last tab</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">Show lyrics</string>
     <string name="pref_title_suggestions">Show suggestions</string>
     <string name="pref_title_swipe_anywhere_now_playing">Swipe anywhere to change song</string>
@@ -444,13 +446,10 @@
     <string name="restored_previous_purchase_please_restart">ယခင်ဝယ်ယူမှုကို ပြန်လည်ရယူပြီးပါပြီ။ Feature အားလုံးအလုပ်လုပ်ရန် app မှထွက်ပြီးပြန်ဝင်ပါ။</string>
     <string name="restored_previous_purchases">ယခင်ဝယ်ယူမှုအား ပြန်လည်ရယူပြီးပါပြီ</string>
     <string name="restoring_purchase">ယခင်ဝယ်ယူမှုအား ပြန်လည်ရယူနေသည်...</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">သီချင်းများကို Ringtone ထားရန် app အား System Settings များကိုပြင်ဆင်ခွင့်ပေးရန်လိုသည်။</string>
     <string name="ringtone_title">Ringtone (Optional)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">ဖိုင်ဖျက်ခြင်းမအောင်မြင်ပါ: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">SAF URI ကိုမရယူနိုင်ပါ</string>
@@ -481,7 +480,7 @@
     <string name="share_summary">သင့်မိသားစုနှင့် သူငယ်ချင်းများကိုပြန်လည်မျှဝေလိုက်ပါ</string>
     <string name="share_to_stories">Stories သို့မျှဝေမည်</string>
     <string name="show_album_artists">Show Album Artists</string>
-    <string name="shuffle">ကျရာ</string>
+    <string name="shuffle">Shuffle</string>
     <string name="simple">ရိုးရိုးရှင်းရှင်း</string>
     <string name="sleep_timer_canceled">Sleep timer ကိုဖျက်ပြီးပါပြီ</string>
     <string name="sleep_timer_set">ယခုမှစတင်၍ Sleep timer ကို %d မိနစ်အချိန်မှတ်ပြီးပါပြီ</string>
@@ -492,7 +491,7 @@
     <string name="songs">သီချင်းများ</string>
     <string name="sort_order">အထားအသိုပြင်မည်</string>
     <string name="sort_order_a_z">ငယ်ရာမှကြီးရာ</string>
-    <string name="sort_order_album">အယ်လ်ဘမ်</string>
+    <string name="sort_order_album">Album</string>
     <string name="sort_order_artist">အဆိုတော်</string>
     <string name="sort_order_composer">တေးရေးဆရာ</string>
     <string name="sort_order_date">ထည့်သွင်းသည့်ရက်</string>
@@ -501,8 +500,6 @@
     <string name="sort_order_num_songs">အပုဒ်အရေအတွက်</string>
     <string name="sort_order_num_songs_desc">အပုဒ်အရေအတွက်ပြောင်းပြန်</string>
     <string name="sort_order_year">ထွက်ရှိသည့်နှစ်</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">ကြီးရာမှငယ်ရာ</string>
     <string name="speech_not_supported">ဆောရီး! သင့် device သည် အသံဖြင့်ပြောဆိုခြင်းအား အထောက်အပံ့မပေးထားပါ</string>
     <string name="speech_prompt">သင့် Library တွင်ရှာဖွေခြင်း</string>
@@ -559,10 +556,4 @@
     <string name="you_have_to_select_at_least_one_category">အနည်းဆုံး category တစ်ခုရွေးချယ်ရန်လိုအပ်သည်</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">Issue tracker website သို့ခေါ်ဆောင်သွားပါမည်</string>
     <string name="your_account_data_is_only_used_for_authentication">သင့်အကောင့်အချက်အလက်ကို အတည်ပြုရန်အတွက်သာအသုံးပြုပါသည်။</string>
-    <string name="could_not_write_tags_to_file">Could not write tags to the music file!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

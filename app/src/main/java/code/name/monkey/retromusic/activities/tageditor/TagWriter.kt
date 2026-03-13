@@ -74,16 +74,9 @@ class TagWriter {
                         val audioFile = AudioFileIO.read(File(filePath))
                         val tag = audioFile.tagOrCreateAndSetDefault
                         if (info.fieldKeyValueMap != null) {
-                            for ((key, newValue) in info.fieldKeyValueMap) {
+                            for ((key, value) in info.fieldKeyValueMap) {
                                 try {
-                                    val currentValue = tag.getFirst(key)
-                                    if (currentValue != newValue) {
-                                        if (newValue.isEmpty()) {
-                                            tag.deleteField(key)
-                                        } else {
-                                            tag.setField(key, newValue)
-                                        }
-                                    }
+                                    tag.setField(key, value)
                                 } catch (e: FieldDataInvalidException) {
                                     withContext(Dispatchers.Main) {
                                         context.showToast(R.string.could_not_write_tags_to_file)
@@ -134,7 +127,6 @@ class TagWriter {
                 val cacheFiles = mutableListOf<File>()
                 var artwork: Artwork? = null
                 var albumArtFile: File? = null
-
                 if (info.artworkInfo?.artwork != null) {
                     try {
                         albumArtFile = createAlbumArtFile(context).canonicalFile
@@ -148,36 +140,24 @@ class TagWriter {
                         e.printStackTrace()
                     }
                 }
-
                 var wroteArtwork = false
                 var deletedArtwork = false
-
                 for (filePath in info.filePaths!!) {
                     try {
                         val originFile = File(filePath)
                         val cacheFile = File(context.cacheDir, originFile.name)
                         cacheFiles.add(cacheFile)
-
                         originFile.inputStream().use { input ->
                             cacheFile.outputStream().use { output ->
                                 input.copyTo(output)
                             }
                         }
-
                         val audioFile = AudioFileIO.read(cacheFile)
                         val tag = audioFile.tagOrCreateAndSetDefault
-
                         if (info.fieldKeyValueMap != null) {
-                            for ((key, newValue) in info.fieldKeyValueMap) {
+                            for ((key, value) in info.fieldKeyValueMap) {
                                 try {
-                                    val currentValue = tag.getFirst(key)
-                                    if (currentValue != newValue) {
-                                        if (newValue.isEmpty()) {
-                                            tag.deleteField(key)
-                                        } else {
-                                            tag.setField(key, newValue)
-                                        }
-                                    }
+                                    tag.setField(key, value)
                                 } catch (e: FieldDataInvalidException) {
                                     withContext(Dispatchers.Main) {
                                         context.showToast(R.string.could_not_write_tags_to_file)

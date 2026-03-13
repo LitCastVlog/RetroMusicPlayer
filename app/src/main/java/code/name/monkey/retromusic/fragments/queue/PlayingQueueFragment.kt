@@ -17,7 +17,6 @@ package code.name.monkey.retromusic.fragments.queue
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

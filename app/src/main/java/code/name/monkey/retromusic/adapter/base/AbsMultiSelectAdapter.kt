@@ -8,6 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.annotation.MenuRes
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
+import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.databinding.NumberRollViewBinding
 import code.name.monkey.retromusic.views.NumberRollView
@@ -40,10 +41,12 @@ abstract class AbsMultiSelectAdapter<V : RecyclerView.ViewHolder?, I>(
         return true
     }
 
-    @Suppress("DEPRECATION")
     override fun onDestroyActionMode(mode: ActionMode?) {
         clearChecked()
-        activity.window.statusBarColor = Color.TRANSPARENT
+        activity.window.statusBarColor = when {
+            VersionUtils.hasMarshmallow() -> Color.TRANSPARENT
+            else -> Color.BLACK
+        }
         actionMode = null
         onBackPressedCallback.remove()
     }

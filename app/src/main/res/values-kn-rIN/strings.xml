@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="about_album_label">%s ನ ಬಗ್ಗೆ </string>
+    <string name="about_album_label">%s ನ ಬಗ್ಗೆ</string>
     <string name="about_settings_summary">ತಂಡ, ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಲಿಂಕ್‌ಗಳು</string>
     <string name="accent_color">ಪ್ರಧಾನ ಬಣ್ಣ</string>
     <string name="accent_color_desc">ಪ್ರಧಾನ ಬಣ್ಣ, ಇದು ನೇರಳೆ ಬಣ್ಣಕ್ಕೆ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿರುತ್ತದೆ</string>
@@ -222,6 +222,7 @@
     <string name="import_playlist_message">ಇದು ಹಾಡುಗಳೊಂದಿಗೆ ಆಂಡ್ರಾಯ್ಡ್ ಮೀಡಿಯಾ ಸ್ಟೋರ್‌ನಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡಲಾದ ಎಲ್ಲಾ ಪ್ಲೇಲಿಸ್ಟ್ಗಳನ್ನು ಆಮದು ಮಾಡಿಕೊಳ್ಳುತ್ತದೆ, 
 ಪ್ಲೇಲಿಸ್ಟ್ಗಳು ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದ್ದರೆ, ಹಾಡುಗಳು ವಿಲೀನಗೊಳ್ಳುತ್ತವೆ.</string>
     <string name="inserted_x_songs_into_playlist_x">%2$s ಪ್ಲೇಲಿಸ್ಟ್ ಗೆ %1$d ಹಾಡುಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ.</string>
+    <string name="instagram_page_summary">Instagram ನಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲು ನಿಮ್ಮ Retro Music ಸೆಟಪ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="keyboard">ಕೀಬೋರ್ಡ್‌</string>
     <string name="label_bit_rate">ಬಿಟ್ ರೇಟ್</string>
     <string name="label_file_format">ಸ್ವರೂಪ</string>
@@ -273,13 +274,14 @@
     <string name="no_purchase_found">ಯಾವುದೇ ಖರೀದಿ ಕಂಡುಬಂದಿಲ್ಲ.</string>
     <string name="no_results">ಯಾವುದೇ ಫಲಿತಾಂಶಗಳಿಲ್ಲ</string>
     <string name="no_songs">ನಿಮ್ಮ ಬಳಿ ಯಾವುದೇ ಹಾಡುಗಳಿಲ್ಲ</string>
-    <string name="no_search_results">No search results</string>
     <string name="normal">ಸಾಧಾರಣ</string>
     <string name="normal_lyrics">ಸಾಮಾನ್ಯ ಸಾಹಿತ್ಯ</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> ಯು ಮೀಡಿಯಾ ಸ್ಟೋರ್‌ನಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ.]]></string>
     <string name="not_recently_played">ಇತ್ತೀಚೆಗೆ ಪ್ಲೇ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="nothing_to_scan">ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಏನೂ ಇಲ್ಲ.</string>
     <string name="nothing_to_see">ನೋಡಲು ಏನೂ ಇಲ್ಲ</string>
+    <string name="notification">ಅಧಿಸೂಚನೆ</string>
+    <string name="notification_settings_summary">ಅಧಿಸೂಚನೆ ಶೈಲಿಯನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ</string>
     <string name="now_playing">ಇವಾಗ ಪ್ಲೇ ಮಾಡಲಾಗುತ್ತಿರುವುದು</string>
     <string name="now_playing_queue">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪಟ್ಟಿ</string>
     <string name="now_playing_summary">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪರದೆಯನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ</string>
@@ -332,8 +334,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">ಶೂನ್ಯದಲ್ಲಿ ವಿರಾಮಗೊಳಿಸುತ್ತದೆ</string>
     <string name="pref_keep_screen_on_summary">ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದರಿಂದ ಬ್ಯಾಟರಿ ಬಾಳಿಕೆ ಪರಿಣಾಮ ಬೀರಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿನಲ್ಲಿಡಿ</string>
     <string name="pref_keep_screen_on_title">ಸ್ಕ್ರೀನ್ ಆನ್‌ನಲ್ಲಿರಿಸಿ</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</string>
     <string name="pref_snow_fall_title">ಹಿಮಪಾತದ ಪರಿಣಾಮ</string>
     <string name="pref_summary_album_art_on_lockscreen">ಲಾಕ್‌ಸ್ಕ್ರೀನ್ ವಾಲ್‌ಪೇಪರ್ ಆಗಿ ಪ್ರಸ್ತುತ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಹಾಡಿನ ಆಲ್ಬಮ್ ಕವರ್ ಅನ್ನು ಬಳಸಿ</string>
@@ -344,6 +344,7 @@
     <string name="pref_summary_bluetooth_playback">ಬ್ಲೂಟೂತ್ ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಗೊಂಡ ತಕ್ಷಣ ಪ್ಲೇ ಮಾಡಲು ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="pref_summary_blurred_album_art">ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಆಲ್ಬಮ್ ಕವರ್ ಅನ್ನು ಮಸುಕುಗೊಳಿಸಿ. ಇಥರರ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ವಿಜೆಟ್‌ಗಳೊಂದಿಗೆ ಸಮಸ್ಯೆಗಳನ್ನು ಉಂಟುಮಾಡಬಹುದು</string>
     <string name="pref_summary_carousel_effect">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪರದೆಯಲ್ಲಿ ಆಲ್ಬಮ್ ಆರ್ಟ್‌ಗಾಗಿ ಏರಿಳಿಕೆ ಪರಿಣಾಮ ಇರುವುದು. ಕಾರ್ಡ್ ಮತ್ತು ಬ್ಲರ್ ಕಾರ್ಡ್ ಥೀಮ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದಿಲ್ಲ ಎಂಬುದನ್ನು ಗಮನಿಸಿ</string>
+    <string name="pref_summary_classic_notification">ಕ್ಲಾಸಿಕ್ ಅಧಿಸೂಚನೆ ವಿನ್ಯಾಸವನ್ನು ಬಳಸಿ</string>
     <string name="pref_summary_colored_app">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪರದೆಯಿಂದ ಆಲ್ಬಮ್ ಕಲೆಗೆ ಅನುಗುಣವಾಗಿ ಹಿನ್ನೆಲೆ ಮತ್ತು ನಿಯಂತ್ರಣ ಬಟನ್ ಬಣ್ಣಗಳು ಬದಲಾಗುತ್ತವೆ</string>
     <string name="pref_summary_colored_app_shortcuts">ಪ್ರಧಾನ ಬಣ್ಣದಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಬಣ್ಣಿಸುತ್ತದೆ. ಪ್ರತಿ ಬಾರಿ ನೀವು ಬಣ್ಣವನ್ನು ಬದಲಾಯಿಸಿದಾಗ ದಯವಿಟ್ಟು ಪರಿಣಾಮ ಬೀರಲು ಇದನ್ನು ಟಾಗಲ್ ಮಾಡಿ</string>
     <string name="pref_summary_colored_notification">"ಆಲ್ಬಮ್ ಕವರ್‌ನ ರೋಮಾಂಚಕ ಬಣ್ಣದಲ್ಲಿ ಅಧಿಸೂಚನೆಯನ್ನು ಬಣ್ಣಿಸುತ್ತದೆ"</string>
@@ -352,6 +353,7 @@
     <string name="pref_summary_expand_now_playing_panel">ಅಧಿಸೂಚನೆಯ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡುವುದರಿಂದ ಹೋಮ್ ಸ್ಕ್ರೀನ್ ಬದಲಿಗೆ ಪ್ಲೇಯಿಂಗ್ ಸ್ಕ್ರೀನ್ ಅನ್ನು ತೋರಿಸುತ್ತದೆ</string>
     <string name="pref_summary_extra_controls">ಮಿನಿ ಪ್ಲೇಯರ್‌ಗೆ ಹೆಚ್ಚುವರಿ ನಿಯಂತ್ರಣಗಳನ್ನು ಸೇರಿಸಿ</string>
     <string name="pref_summary_extra_song_info">ಫೈಲ್ ಫಾರ್ಮ್ಯಾಟ್, ಬಿಟ್ರೇಟ್ ಮತ್ತು ಆವರ್ತನದಂತಹ ಹೆಚ್ಚುವರಿ ಸಾಂಗ್ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸಿ</string>
+    <string name="pref_summary_gapless_playback">"ಕೆಲವು ಸಾಧನಗಳಲ್ಲಿ ಪ್ಲೇಬ್ಯಾಕ್ ಸಮಸ್ಯೆಗಳನ್ನು ಉಂಟುಮಾಡಬಹುದು."</string>
     <string name="pref_summary_home_banner">ಹೋಮ್ ಬ್ಯಾನರ್ ಅನ್ನು ತೋರಿಸಿ ಅಥವಾ ಮರೆಮಾಡಿ</string>
     <string name="pref_summary_ignore_media_store_artwork">ಆಲ್ಬಮ್ ಕವರ್ ಗುಣಮಟ್ಟವನ್ನು ಹೆಚ್ಚಿಸಬಹುದು, ಆದರೆ ಚಿತ್ರಗಳ ಲೋಡಿಂಗ್ ಸಮಯವನ್ನು ಹೆಚ್ಚು ಮಾಡುತ್ತದೆ. ಕಡಿಮೆ ರೆಸಲ್ಯೂಶನ್ ಕಲಾಕೃತಿಯಲ್ಲಿ ನಿಮಗೆ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ ಮಾತ್ರ ಇದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="pref_summary_library_categories">ಸಂಗ್ರಹಣೆಯ ವರ್ಗಗಳ ಗೋಚರತೆ ಮತ್ತು ಕ್ರಮವನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ.</string>
@@ -360,7 +362,6 @@
     <string name="pref_summary_open_source_licences">ಮುಕ್ತ ಸಂಪನ್ಮೂಲ ಸಾಫ್ಟ್‌ವೇರ್‌ಗಾಗಿ ಪರವಾನಗಿ ವಿವರಗಳು</string>
     <string name="pref_summary_pause_history">ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ, ಹೊಸದಾಗಿ ಪ್ಲೇ ಮಾಡಿದ ಹಾಡುಗಳು ಹಿಸ್ಟರಿಯಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ</string>
     <string name="pref_summary_remember_tab">ಪ್ರಾರಂಭದಲ್ಲಿ ಕೊನೆಯದಾಗಿ ಬಳಸಿದ ಟ್ಯಾಬ್‌ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">ಆಲ್ಬಮ್ ಕವರ್ ಮೇಲೆ ಸಿಂಕ್ ಮಾಡಿದ ಸಾಹಿತ್ಯವನ್ನು ಪ್ರದರ್ಶಿಸಿ</string>
     <string name="pref_summary_suggestions">ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಹೊಸ ಸಂಗೀತದ ಮಿಶ್ರಣವನ್ನು ತೋರಿಸಿ</string>
     <string name="pref_summary_swipe_anywhere_now_playing">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪರದೆಯಲ್ಲಿ ಎಲ್ಲಿಯಾದರೂ ಸ್ವೈಪ್ ಮಾಡುವ ಮೂಲಕ ಹಾಡನ್ನು ಬದಲಾಯಿಸುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ</string>
@@ -384,6 +385,7 @@
     <string name="pref_title_bluetooth_playback">ಬ್ಲೂಟೂತ್ ಪ್ಲೇಬ್ಯಾಕ್</string>
     <string name="pref_title_blurred_album_art">ಆಲ್ಬಮ್ ಕವರ್ ಅನ್ನು ಮಸುಕುಗೊಳಿಸಿ</string>
     <string name="pref_title_circle_button">ವೃತ್ತಾಕಾರದ ಪ್ಲೇ ಬಟನ್</string>
+    <string name="pref_title_classic_notification">ಕ್ಲಾಸಿಕ್ ಅಧಿಸೂಚನೆ ವಿನ್ಯಾಸ</string>
     <string name="pref_title_colored_app">ಹೊಂದಿಕೊಳ್ಳುವ ಬಣ್ಣ</string>
     <string name="pref_title_colored_notification">ಬಣ್ಣದ ಅಧಿಸೂಚನೆ</string>
     <string name="pref_title_cross_fade">ಕ್ರಾಸ್ಫೇಡ್ (ಬೀಟಾ)</string>
@@ -392,6 +394,7 @@
     <string name="pref_title_expand_now_playing_panel">ಈಗ ಪ್ಲೇ ಆಗುತ್ತಿರುವ ಪರದೆಯನ್ನು ತೋರಿಸಿ</string>
     <string name="pref_title_extra_controls">ಹೆಚ್ಚುವರಿ ನಿಯಂತ್ರಣಗಳು</string>
     <string name="pref_title_extra_song_info">ಹಾಡಿನ ಮಾಹಿತಿ</string>
+    <string name="pref_title_gapless_playback">ಅಂತರವಿಲ್ಲದ ಪ್ಲೇಬ್ಯಾಕ್</string>
     <string name="pref_title_general_theme">ಆ್ಯಪ್‌ ಥೀಮ್</string>
     <string name="pref_title_home_album_grid_style">ಆಲ್ಬಮ್ ಗ್ರಿಡ್</string>
     <string name="pref_title_home_artist_grid_style">ಕಲಾವಿದ ಗ್ರಿಡ್</string>
@@ -406,7 +409,6 @@
     <string name="pref_title_open_source_licences">ಮುಕ್ತ ಮೂಲ ಪರವಾನಗಿಗಳು</string>
     <string name="pref_title_pause_history">ವಿರಾಮದ ಹಿಸ್ಟರಿ</string>
     <string name="pref_title_remember_tab">ಕೊನೆಯ ಟ್ಯಾಬ್ ಅನ್ನು ನೆನಪಿಡಿ</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">ಸಾಹಿತ್ಯವನ್ನು ತೋರಿಸಿ</string>
     <string name="pref_title_suggestions">ಸಲಹೆಗಳನ್ನು ತೋರಿಸಿ</string>
     <string name="pref_title_swipe_anywhere_now_playing">ಹಾಡನ್ನು ಬದಲಾಯಿಸಲು ಎಲ್ಲಿಯಾದರೂ ಸ್ವೈಪ್ ಮಾಡಿ</string>
@@ -447,13 +449,10 @@
     <string name="restored_previous_purchase_please_restart">ಹಿಂದಿನ ಖರೀದಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ. ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಲು ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ.</string>
     <string name="restored_previous_purchases">ಹಿಂದಿನ ಖರೀದಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ.</string>
     <string name="restoring_purchase">ಖರೀದಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ…</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">ಸಂಗೀತವನ್ನು ರಿಂಗ್‌ಟೋನ್‌ನಂತೆ ಹೊಂದಿಸಲು ನಿಮ್ಮ ಸಾಧನದ ಸಂಯೋಜನೆಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಅನುಮತಿಯ ಅಗತ್ಯವಿದೆ</string>
     <string name="ringtone_title">ರಿಂಗ್‌ಟೋನ್‌ (ಐಚ್ಛಿಕ)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">ಕಡತ ಅಳಿಸುವಿಕೆ ವಿಫಲವಾಗಿದೆ: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">SAF URI ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
@@ -504,8 +503,6 @@
     <string name="sort_order_num_songs">ಹಾಡಿನ ಎಣಿಕೆ</string>
     <string name="sort_order_num_songs_desc">ಹಾಡುಗಳ ಎಣಿಕೆ ಅವರೋಹಣ ಕ್ರಮ</string>
     <string name="sort_order_year">ವರ್ಷ</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">ಅವರೋಹಣ ಕ್ರಮ</string>
     <string name="speech_not_supported">ಕ್ಷಮಿಸಿ! ನಿಮ್ಮ ಸಾಧನವು ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ</string>
     <string name="speech_prompt">ನಿಮ್ಮ ಸಂಗ್ರಹವನ್ನು ಹುಡುಕಿ</string>
@@ -554,7 +551,7 @@
     <string name="welcome">ಸುಸ್ವಾಗತ,</string>
     <string name="what_do_you_want_to_share">ಏನನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವಿರಿ?</string>
     <string name="whats_new">ಹೊಸತೇನಿದೆ</string>
-    <string name="window">Window</string>
+    <string name="window">ಕ್ರಿಯೆಯ ಕಿಟಿಕಿ</string>
     <string name="window_corner_edges">ದುಂಡಾದ ಮೂಲೆಗಳು</string>
     <string name="x_has_been_set_as_ringtone">%1$s ನನ್ನು ನಿಮ್ಮ ರಿಂಗ್ಟೊನ್ ಆಗಿ ಸೆಟ್ ಮಾಡಿ.</string>
     <string name="x_selected">%1$d‌ ಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</string>
@@ -562,10 +559,4 @@
     <string name="you_have_to_select_at_least_one_category">ನೀವು ಕನಿಷ್ಠ ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಬೇಕು.</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">ನಿಮ್ಮನ್ನು ಸಮಸ್ಯೆ ಟ್ರ್ಯಾಕರ್ ಜಾಲತಾಣಕ್ಕೆ ರವಾನಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="your_account_data_is_only_used_for_authentication">ನಿಮ್ಮ ಖಾತೆಯ ಡೇಟಾವನ್ನು ದೃಢೀಕರಣಕ್ಕಾಗಿ ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ.</string>
-    <string name="could_not_write_tags_to_file">ಸಂಗೀತ ಫೈಲ್‌ಗೆ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಬರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

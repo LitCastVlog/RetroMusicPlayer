@@ -21,7 +21,6 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.widget.Button
 import android.widget.CheckBox
-import android.widget.ProgressBar
 import android.widget.SeekBar
 import androidx.annotation.AttrRes
 import androidx.annotation.CheckResult
@@ -194,13 +193,6 @@ fun FloatingActionButton.accentColor() {
     imageTintList = ColorStateList.valueOf(textColor)
 }
 
-fun ProgressBar.accentColor() {
-    if (materialYou) return
-    val color = ThemeStore.accentColor(context)
-    indeterminateTintList = ColorStateList.valueOf(color)
-
-}
-
 fun MaterialButton.applyColor(color: Int) {
     val backgroundColorStateList = ColorStateList.valueOf(color)
     val textColorColorStateList = ColorStateList.valueOf(
@@ -218,7 +210,6 @@ fun MaterialButton.accentColor() {
     if (materialYou) return
     applyColor(ThemeStore.accentColor(context))
 }
-
 
 fun MaterialButton.applyOutlineColor(color: Int) {
     val colorStateList = ColorStateList.valueOf(color)

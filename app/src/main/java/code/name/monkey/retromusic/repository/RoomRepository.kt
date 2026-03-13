@@ -3,15 +3,14 @@ package code.name.monkey.retromusic.repository
 import android.content.Context
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.db.*
+import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_A_Z
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_SONG_COUNT
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_SONG_COUNT_DESC
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_Z_A
 import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.util.PreferenceUtil
-import java.text.Collator
 
 
 interface RoomRepository {
@@ -62,25 +61,23 @@ class RealRoomRepository(
     override suspend fun playlists(): List<PlaylistEntity> = playlistDao.playlists()
 
     @WorkerThread
-    override suspend fun playlistWithSongs(): List<PlaylistWithSongs> {
-        val collator = Collator.getInstance()
-        return when (PreferenceUtil.playlistSortOrder) {
+    override suspend fun playlistWithSongs(): List<PlaylistWithSongs> =
+        when (PreferenceUtil.playlistSortOrder) {
             PLAYLIST_A_Z ->
-                playlistDao.playlistsWithSongs().sortedWith { p1, p2 ->
-                    collator.compare(p1.playlistEntity.playlistName, p2.playlistEntity.playlistName)
+                playlistDao.playlistsWithSongs().sortedBy {
+                    it.playlistEntity.playlistName
                 }
             PLAYLIST_Z_A -> playlistDao.playlistsWithSongs()
-                .sortedWith { p1, p2 ->
-                    collator.compare(p2.playlistEntity.playlistName, p1.playlistEntity.playlistName)
+                .sortedByDescending {
+                    it.playlistEntity.playlistName
                 }
             PLAYLIST_SONG_COUNT -> playlistDao.playlistsWithSongs().sortedBy { it.songs.size }
             PLAYLIST_SONG_COUNT_DESC -> playlistDao.playlistsWithSongs()
                 .sortedByDescending { it.songs.size }
-            else -> playlistDao.playlistsWithSongs().sortedWith { p1, p2 ->
-                collator.compare(p1.playlistEntity.playlistName, p2.playlistEntity.playlistName)
+            else -> playlistDao.playlistsWithSongs().sortedBy {
+                it.playlistEntity.playlistName
             }
         }
-    }
 
     @WorkerThread
     override fun getPlaylist(playlistId: Long): LiveData<PlaylistWithSongs> = playlistDao.getPlaylist(playlistId)

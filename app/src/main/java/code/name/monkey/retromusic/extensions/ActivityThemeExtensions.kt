@@ -32,23 +32,6 @@ fun AppCompatActivity.keepScreenOn(keepScreenOn: Boolean) {
     }
 }
 
-@Suppress("DEPRECATION")
-fun AppCompatActivity.maybeShowWhenLocked() {
-    if (PreferenceUtil.isShowWhenLockedEnabled) {
-        if (VersionUtils.hasOreoMR1()) {
-            setShowWhenLocked(true)
-        } else {
-            window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
-        }
-    } else {
-        if (VersionUtils.hasOreoMR1()) {
-            setShowWhenLocked(false)
-        } else {
-            window.clearFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
-        }
-    }
-}
-
 fun AppCompatActivity.setEdgeToEdgeOrImmersive() {
     if (PreferenceUtil.isFullScreenMode) {
         setImmersiveFullscreen()
@@ -96,7 +79,6 @@ private fun AppCompatActivity.hideStatusBar(fullscreen: Boolean) {
     }
 }
 
-@Suppress("DEPRECATION")
 fun AppCompatActivity.setDrawBehindSystemBars() {
     if (VersionUtils.hasOreo()) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -107,11 +89,14 @@ fun AppCompatActivity.setDrawBehindSystemBars() {
         }
     } else {
         setNavigationBarColorPreOreo(surfaceColor())
-        setStatusBarColor(Color.TRANSPARENT)
+        if (VersionUtils.hasMarshmallow()) {
+            setStatusBarColor(Color.TRANSPARENT)
+        } else {
+            setStatusBarColor(Color.BLACK)
+        }
     }
 }
 
-@Suppress("DEPRECATION")
 fun FragmentActivity.setTaskDescriptionColor(color: Int) {
     var colorFinal = color
     // Task description requires fully opaque color
@@ -136,14 +121,16 @@ fun AppCompatActivity.setTaskDescriptionColorAuto() {
 
 @Suppress("Deprecation")
 fun AppCompatActivity.setLightStatusBar(enabled: Boolean) {
-    val decorView = window.decorView
-    val systemUiVisibility = decorView.systemUiVisibility
-    if (enabled) {
-        decorView.systemUiVisibility =
-            systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-    } else {
-        decorView.systemUiVisibility =
-            systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()
+    if (VersionUtils.hasMarshmallow()) {
+        val decorView = window.decorView
+        val systemUiVisibility = decorView.systemUiVisibility
+        if (enabled) {
+            decorView.systemUiVisibility =
+                systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        } else {
+            decorView.systemUiVisibility =
+                systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()
+        }
     }
 }
 
@@ -184,13 +171,22 @@ fun AppCompatActivity.setLightNavigationBarAuto(bgColor: Int) {
  *
  * @param color the new statusbar color (will be shifted down on Lollipop and above)
  */
-@Suppress("DEPRECATION")
 fun AppCompatActivity.setStatusBarColor(color: Int) {
     val statusBar = window.decorView.rootView.findViewById<View>(R.id.status_bar)
     if (statusBar != null) {
-        statusBar.setBackgroundColor(color)
+        when {
+            VersionUtils.hasMarshmallow() -> statusBar.setBackgroundColor(color)
+            else -> statusBar.setBackgroundColor(
+                ColorUtil.darkenColor(
+                    color
+                )
+            )
+        }
     } else {
-        window.statusBarColor = color
+        when {
+            VersionUtils.hasMarshmallow() -> window.statusBarColor = color
+            else -> window.statusBarColor = ColorUtil.darkenColor(color)
+        }
     }
     setLightStatusBarAuto(surfaceColor())
 }
@@ -201,7 +197,6 @@ fun AppCompatActivity.setStatusBarColorAuto() {
     setLightStatusBarAuto(surfaceColor())
 }
 
-@Suppress("DEPRECATION")
 fun AppCompatActivity.setNavigationBarColor(color: Int) {
     if (VersionUtils.hasOreo()) {
         window.navigationBarColor = color
@@ -211,14 +206,12 @@ fun AppCompatActivity.setNavigationBarColor(color: Int) {
     setLightNavigationBarAuto(color)
 }
 
-@Suppress("DEPRECATION")
 fun AppCompatActivity.setNavigationBarColorPreOreo(color: Int) {
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
         window.navigationBarColor = ColorUtil.darkenColor(color)
     }
 }
 
-@Suppress("DEPRECATION")
 fun AppCompatActivity.setStatusBarColorPreMarshmallow(color: Int) {
     val statusBar = window.decorView.rootView.findViewById<View>(R.id.status_bar)
     if (statusBar != null) {

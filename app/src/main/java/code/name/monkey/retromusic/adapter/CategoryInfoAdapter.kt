@@ -30,7 +30,7 @@ import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.SwipeAndDragHelper
 import code.name.monkey.retromusic.util.SwipeAndDragHelper.ActionCompletionContract
 
-class CategoryInfoAdapter : RecyclerView.Adapter<CategoryInfoAdapter.ViewHolder>(),
+class CategoryInfoAdapter : RecyclerView.Adapter<code.name.monkey.retromusic.adapter.CategoryInfoAdapter.ViewHolder>(),
     ActionCompletionContract {
     var categoryInfos: MutableList<CategoryInfo> =
         PreferenceUtil.libraryCategory.toMutableList()

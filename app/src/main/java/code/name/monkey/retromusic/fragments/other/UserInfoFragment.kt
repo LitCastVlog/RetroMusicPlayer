@@ -23,7 +23,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.ActivityResult
-import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.doOnPreDraw
 import androidx.core.view.updateLayoutParams
@@ -49,6 +48,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.github.dhaval2404.imagepicker.ImagePicker
+import com.github.dhaval2404.imagepicker.constant.ImageProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.transition.MaterialContainerTransform
 import kotlinx.coroutines.Dispatchers
@@ -80,9 +81,6 @@ class UserInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         applyToolbar(binding.toolbar)
-        binding.toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-        }
 
         binding.nameContainer.accentColor()
         binding.next.accentColor()
@@ -169,37 +167,59 @@ class UserInfoFragment : Fragment() {
             .into(binding.userImage)
     }
 
-
     private fun selectBannerImage() {
-        pickBannerImageLauncher.launch(
-            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-        )
+        ImagePicker.with(this)
+            .compress(1440)
+            .provider(ImageProvider.GALLERY)
+            .crop(16f, 9f)
+            .createIntent {
+                startForBannerImageResult.launch(it)
+            }
     }
 
     private fun pickNewPhoto() {
-        pickProfileImageLauncher.launch(
-            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-        )
+        ImagePicker.with(this)
+            .provider(ImageProvider.GALLERY)
+            .cropSquare()
+            .compress(1440)
+            .createIntent {
+                startForProfileImageResult.launch(it)
+            }
     }
 
-    private val pickBannerImageLauncher =
-        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri: Uri? ->
-            if (uri != null) {
-                setAndSaveBannerImage(uri)
-            } else {
-                showToast("No image selected")
+    private val startForProfileImageResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            saveImage(result) { fileUri ->
+                setAndSaveUserImage(fileUri)
             }
         }
 
-    private val pickProfileImageLauncher =
-        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri: Uri? ->
-            if (uri != null) {
-                setAndSaveUserImage(uri)
-            } else {
-                showToast("No image selected")
+    private val startForBannerImageResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            saveImage(result) { fileUri ->
+                setAndSaveBannerImage(fileUri)
             }
         }
 
+    private fun saveImage(result: ActivityResult, doIfResultOk: (uri: Uri) -> Unit) {
+        val resultCode = result.resultCode
+        val data = result.data
+        when (resultCode) {
+            Activity.RESULT_OK -> {
+                data?.data?.let { uri ->
+                    doIfResultOk(uri)
+                }
+            }
+
+            ImagePicker.RESULT_ERROR -> {
+                showToast(ImagePicker.getError(data))
+            }
+
+            else -> {
+                showToast("Task Cancelled")
+            }
+        }
+    }
 
     private fun setAndSaveBannerImage(fileUri: Uri) {
         Glide.with(this)

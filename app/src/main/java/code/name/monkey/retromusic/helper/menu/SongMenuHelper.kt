@@ -12,6 +12,7 @@
  * See the GNU General Public License for more details.
  *
  */
+
 package code.name.monkey.retromusic.helper.menu
 
 import android.content.Intent
@@ -48,8 +49,7 @@ import org.koin.core.component.get
 import java.io.File
 
 object SongMenuHelper : KoinComponent {
-    val MENU_RES
-        get() = R.menu.menu_item_song
+    const val MENU_RES = R.menu.menu_item_song
 
     fun handleMenuClick(activity: FragmentActivity, song: Song, menuItemId: Int): Boolean {
         val libraryViewModel = activity.getViewModel() as LibraryViewModel

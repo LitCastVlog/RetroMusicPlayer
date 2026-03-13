@@ -17,17 +17,15 @@ package code.name.monkey.retromusic.fragments.player
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.core.animation.doOnEnd
 import androidx.core.view.isVisible
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.PreferenceManager
 import androidx.viewpager.widget.ViewPager
-import kotlinx.coroutines.launch
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import code.name.monkey.retromusic.LYRICS_TYPE
@@ -81,10 +79,8 @@ class PlayerAlbumCoverFragment : AbsMusicServiceFragment(R.layout.fragment_playe
     fun removeSlideEffect() {
         val transformer = ParallaxPagerTransformer(R.id.player_image)
         transformer.setSpeed(0.3f)
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewPager.setPageTransformer(false, transformer)
-            }
+        lifecycleScope.launchWhenStarted {
+            viewPager.setPageTransformer(false, transformer)
         }
     }
 
@@ -252,18 +248,11 @@ class PlayerAlbumCoverFragment : AbsMusicServiceFragment(R.layout.fragment_playe
     }
 
     private fun updatePlayingQueue() {
-        val adapter = binding.viewPager.adapter
-        if (adapter is AlbumCoverPagerAdapter) {
-            adapter.updateData(MusicPlayerRemote.playingQueue)
-        } else {
-            binding.viewPager.adapter = AlbumCoverPagerAdapter(
-                parentFragmentManager,
-                MusicPlayerRemote.playingQueue
-            )
-
+        binding.viewPager.apply {
+            adapter = AlbumCoverPagerAdapter(parentFragmentManager, MusicPlayerRemote.playingQueue)
+            setCurrentItem(MusicPlayerRemote.position, true)
+            onPageSelected(MusicPlayerRemote.position)
         }
-        binding.viewPager.setCurrentItem(MusicPlayerRemote.position, true)
-        onPageSelected(MusicPlayerRemote.position)
     }
 
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
@@ -303,7 +292,7 @@ class PlayerAlbumCoverFragment : AbsMusicServiceFragment(R.layout.fragment_playe
                 setLRCViewColors(primaryColor, secondaryColor)
             }
             Color, Classic -> setLRCViewColors(color.primaryTextColor, color.secondaryTextColor)
-            Blur -> setLRCViewColors(android.graphics.Color.WHITE, ColorUtil.withAlpha(android.graphics.Color.WHITE, 0.5f))
+            Blur -> setLRCViewColors(Color.WHITE, ColorUtil.withAlpha(Color.WHITE, 0.5f))
             else -> setLRCViewColors(primaryColor, secondaryColor)
         }
     }

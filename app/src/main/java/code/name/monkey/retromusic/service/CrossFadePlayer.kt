@@ -2,12 +2,10 @@ package code.name.monkey.retromusic.service
 
 import android.animation.Animator
 import android.content.Context
-import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.media.PlaybackParams
-import android.net.Uri
 import android.os.PowerManager
-import androidx.core.net.toUri
+import code.name.monkey.appthemehelper.util.VersionUtils.hasMarshmallow
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.showToast
 import code.name.monkey.retromusic.extensions.uri
@@ -16,16 +14,8 @@ import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.service.AudioFader.Companion.createFadeAnimator
 import code.name.monkey.retromusic.service.playback.Playback.PlaybackCallbacks
 import code.name.monkey.retromusic.util.PreferenceUtil
-import code.name.monkey.retromusic.util.PreferenceUtil.playbackPitch
-import code.name.monkey.retromusic.util.PreferenceUtil.playbackSpeed
 import code.name.monkey.retromusic.util.logE
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.isActive
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 /** @author Prathamesh M */
 
@@ -36,8 +26,7 @@ import kotlinx.coroutines.launch
 * play but with decreasing volume and start the player with the next song with increasing volume
 * and vice versa for upcoming song and so on.
 */
-class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
-    MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
+class CrossFadePlayer(context: Context) : LocalPlayback(context) {
 
     private var currentPlayer: CurrentPlayer = CurrentPlayer.NOT_SET
     private var player1 = MediaPlayer()
@@ -45,7 +34,7 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
     private var durationListener = DurationListener()
     private var mIsInitialized = false
     private var hasDataSource: Boolean = false /* Whether first player has DataSource */
-    private var nextDataSource: String? = null
+    private var nextDataSource:String? = null
     private var crossFadeAnimator: Animator? = null
     override var callbacks: PlaybackCallbacks? = null
     private var crossFadeDuration = PreferenceUtil.crossFadeDuration
@@ -157,11 +146,11 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
         }
     }
 
-    override fun setNextDataSource(path: Uri?) {
+    override fun setNextDataSource(path: String?) {
         // Store the next song path in nextDataSource, we'll need this just in case
         // if the user closes the app, then we can't get the nextSong from musicService
         // As MusicPlayerRemote won't have access to the musicService
-        nextDataSource = path.toString()
+        nextDataSource = path
     }
 
     override fun setAudioSessionId(sessionId: Int): Boolean {
@@ -222,11 +211,9 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
             CurrentPlayer.PLAYER_ONE -> {
                 player1
             }
-
             CurrentPlayer.PLAYER_TWO -> {
                 player2
             }
-
             CurrentPlayer.NOT_SET -> {
                 null
             }
@@ -238,11 +225,9 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
             CurrentPlayer.PLAYER_ONE -> {
                 player2
             }
-
             CurrentPlayer.PLAYER_TWO -> {
                 player1
             }
-
             CurrentPlayer.NOT_SET -> {
                 null
             }
@@ -364,40 +349,6 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
         }
     }
 
-    private fun setDataSourceImpl(
-        player: MediaPlayer,
-        path: String,
-        completion: (success: Boolean) -> Unit,
-    ) {
-        player.reset()
-        try {
-            if (path.startsWith("content://")) {
-                player.setDataSource(context, path.toUri())
-            } else {
-                player.setDataSource(path)
-            }
-            player.setAudioAttributes(
-                AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .build()
-            )
-            player.playbackParams =
-                PlaybackParams().setSpeed(playbackSpeed).setPitch(playbackPitch)
-
-            player.setOnPreparedListener {
-                player.setOnPreparedListener(null)
-                completion(true)
-            }
-            player.prepare()
-        } catch (e: Exception) {
-            completion(false)
-            e.printStackTrace()
-        }
-        player.setOnCompletionListener(this)
-        player.setOnErrorListener(this)
-    }
-
     companion object {
         val TAG: String = CrossFadePlayer::class.java.simpleName
     }
@@ -406,9 +357,11 @@ class CrossFadePlayer(context: Context) : AudioManagerPlayback(context),
 internal fun crossFadeScope(): CoroutineScope = CoroutineScope(Job() + Dispatchers.Default)
 
 fun MediaPlayer.setPlaybackSpeedPitch(speed: Float, pitch: Float) {
-    val wasPlaying = isPlaying
-    playbackParams = PlaybackParams().setSpeed(speed).setPitch(pitch)
-    if (!wasPlaying) {
-        pause()
+    if (hasMarshmallow()) {
+        val wasPlaying = isPlaying
+        playbackParams = PlaybackParams().setSpeed(speed).setPitch(pitch)
+        if (!wasPlaying) {
+            pause()
+        }
     }
 }

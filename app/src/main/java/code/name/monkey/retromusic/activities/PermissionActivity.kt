@@ -15,7 +15,6 @@
 package code.name.monkey.retromusic.activities
 
 import android.Manifest.permission.BLUETOOTH_CONNECT
-import android.app.AlarmManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
@@ -25,7 +24,6 @@ import android.provider.Settings
 import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
-import androidx.core.content.getSystemService
 import androidx.core.net.toUri
 import androidx.core.text.parseAsHtml
 import androidx.core.view.isVisible
@@ -49,12 +47,14 @@ class PermissionActivity : AbsMusicServiceActivity() {
         binding.storagePermission.setButtonClick {
             requestPermissions()
         }
-        binding.audioPermission.show()
-        binding.audioPermission.setButtonClick {
-            if (!hasAudioPermission()) {
-                val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-                intent.data = ("package:" + applicationContext.packageName).toUri()
-                startActivity(intent)
+        if (VersionUtils.hasMarshmallow()) {
+            binding.audioPermission.show()
+            binding.audioPermission.setButtonClick {
+                if (!hasAudioPermission()) {
+                    val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
+                    intent.data = ("package:" + applicationContext.packageName).toUri()
+                    startActivity(intent)
+                }
             }
         }
 
@@ -66,11 +66,6 @@ class PermissionActivity : AbsMusicServiceActivity() {
                     arrayOf(BLUETOOTH_CONNECT),
                     BLUETOOTH_PERMISSION_REQUEST
                 )
-            }
-            binding.alarmPermission.show()
-            binding.alarmPermission.setButtonClick {
-                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
-                startActivity(intent)
             }
         } else {
             binding.audioPermission.setNumber("2")
@@ -97,12 +92,10 @@ class PermissionActivity : AbsMusicServiceActivity() {
     }
 
     private fun setupTitle() {
-        val color = accentColor()
-        val hexColor = String.format("#%06X", 0xFFFFFF and color)
         val appName =
             getString(
                 R.string.message_welcome,
-                "<b>Retro <span  style='color:$hexColor';>Music</span></b>"
+                "<b>Metro</b>"
             )
                 .parseAsHtml()
         binding.appNameText.text = appName
@@ -116,20 +109,17 @@ class PermissionActivity : AbsMusicServiceActivity() {
             binding.storagePermission.checkImage.imageTintList =
                 ColorStateList.valueOf(accentColor())
         }
-        if (hasAudioPermission()) {
-            binding.audioPermission.checkImage.isVisible = true
-            binding.audioPermission.checkImage.imageTintList =
-                ColorStateList.valueOf(accentColor())
+        if (VersionUtils.hasMarshmallow()) {
+            if (hasAudioPermission()) {
+                binding.audioPermission.checkImage.isVisible = true
+                binding.audioPermission.checkImage.imageTintList =
+                    ColorStateList.valueOf(accentColor())
+            }
         }
         if (VersionUtils.hasS()) {
             if (hasBluetoothPermission()) {
                 binding.bluetoothPermission.checkImage.isVisible = true
                 binding.bluetoothPermission.checkImage.imageTintList =
-                    ColorStateList.valueOf(accentColor())
-            }
-            if (hasAlarmPermission()) {
-                binding.alarmPermission.checkImage.isVisible = true
-                binding.alarmPermission.checkImage.imageTintList =
                     ColorStateList.valueOf(accentColor())
             }
         }
@@ -150,10 +140,5 @@ class PermissionActivity : AbsMusicServiceActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun hasAudioPermission(): Boolean {
         return Settings.System.canWrite(this)
-    }
-
-    @RequiresApi(Build.VERSION_CODES.S)
-    private fun hasAlarmPermission(): Boolean {
-        return getSystemService<AlarmManager>()?.canScheduleExactAlarms() == true
     }
 }

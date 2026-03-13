@@ -221,6 +221,7 @@
     <string name="import_playlist">I-import ang playlist</string>
     <string name="import_playlist_message">Ini-import nito ang lahat ng playlist na nakalista sa Android Media Store na may mga kanta, kung mayroon nang mga playlist, pagsasamahin ang mga kanta.</string>
     <string name="inserted_x_songs_into_playlist_x">Nagpasok ng %1$d na kanta sa playlist na %2$s.</string>
+    <string name="instagram_page_summary">Ibahagi ang iyong setup ng Retro Music para ipakita sa Instagram</string>
     <string name="keyboard">Keyboard</string>
     <string name="label_bit_rate">Bitrate</string>
     <string name="label_file_format">Format</string>
@@ -272,13 +273,14 @@
     <string name="no_purchase_found">Walang nakitang binili.</string>
     <string name="no_results">Walang mga nakita</string>
     <string name="no_songs">Wala kang mga kanta</string>
-    <string name="no_search_results">No search results</string>
     <string name="normal">Normal</string>
     <string name="normal_lyrics">Normal ang mga liriko</string>
     <string name="not_listed_in_media_store"><![CDATA[Ang <b>%s</b> ay hindi nakalista sa media store.]]></string>
     <string name="not_recently_played">Hindi kamakailan naipa-tugtog</string>
     <string name="nothing_to_scan">Walang ma-scan.</string>
     <string name="nothing_to_see">Walang makita</string>
+    <string name="notification">Abiso</string>
+    <string name="notification_settings_summary">I-customize ang istilo ng abiso</string>
     <string name="now_playing">Now playing</string>
     <string name="now_playing_queue">Now playing queue</string>
     <string name="now_playing_summary">I-customize ang screen sa now playing</string>
@@ -331,8 +333,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">I-pause sa zero</string>
     <string name="pref_keep_screen_on_summary">Tandaan na ang pagpapagana sa feature na ito ay maaaring makaapekto sa buhay ng baterya</string>
     <string name="pref_keep_screen_on_title">Panatilihing naka-on ang screen</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">Pumili ng wika</string>
     <string name="pref_snow_fall_title">Snow fall effect</string>
     <string name="pref_summary_album_art_on_lockscreen">Gamitin ang kasalukuyang kanta na nagpe-play sa album cover bilang lockscreen wallpaper</string>
@@ -343,6 +343,7 @@
     <string name="pref_summary_bluetooth_playback">Magpe-play agad kapag nakakonekta sa bluetooth device</string>
     <string name="pref_summary_blurred_album_art">I-blur ang album cover sa lockscreen. Maaaring magdulot ng mga problema sa mga third party na app at widget</string>
     <string name="pref_summary_carousel_effect">Carousel effect para sa album art sa screen na nagpe-play ngayon. Tandaan na ang mga tema ng Card at Blur Card ay hindi gagana</string>
+    <string name="pref_summary_classic_notification">Gamitin ang klasikong disenyo ng notification</string>
     <string name="pref_summary_colored_app">Ang mga kulay ng background at control button ay nagbabago ayon sa album art mula sa screen ng nagpe-play ngayon</string>
     <string name="pref_summary_colored_app_shortcuts">Kinukulayan ang mga shortcut ng app sa kulay ng accent. Sa tuwing babaguhin mo ang kulay mangyaring i-toggle ito para magkabisa</string>
     <string name="pref_summary_colored_notification">"Kinukulayan ang notification sa makulay na kulay ng album cover"</string>
@@ -351,6 +352,7 @@
     <string name="pref_summary_expand_now_playing_panel">Ang pag-click sa notification ay deretso sa nagpe-play ngayon ng screen sa halip na sa home screen</string>
     <string name="pref_summary_extra_controls">Magdagdag ng mga karagdagang kontrol para sa mini player</string>
     <string name="pref_summary_extra_song_info">Magpakita ng karagdagang impormasyon ng Kanta, gaya ng format file, bitrate at dalas</string>
+    <string name="pref_summary_gapless_playback">"Maaaring magdulot ng mga isyu sa pag-playback sa ilang device."</string>
     <string name="pref_summary_home_banner">Ipakita o itago ang home banner</string>
     <string name="pref_summary_ignore_media_store_artwork">Maaaring pataasin ang kalidad ng album cover, ngunit nagiging sanhi ng mas mabagal na oras ng paglo-load ng larawan. Paganahin lamang ito kung mayroon kang mga problema sa mga likhang sining na may mababang resolusyon</string>
     <string name="pref_summary_library_categories">I-configure ang visibility at pagkakasunud-sunod ng mga kategorya ng librerya.</string>
@@ -359,7 +361,6 @@
     <string name="pref_summary_open_source_licences">Mga detalye ng lisensya para sa open source software</string>
     <string name="pref_summary_pause_history">When enabled, newly played songs won\'t show in history</string>
     <string name="pref_summary_remember_tab">I-navigate sa huling ginamit na tab sa simula</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">Display synced lyrics over album cover</string>
     <string name="pref_summary_suggestions">Show New Music Mix on homescreen</string>
     <string name="pref_summary_swipe_anywhere_now_playing">Enables changing song by swiping anywhere on the now playing screen</string>
@@ -383,6 +384,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth playback</string>
     <string name="pref_title_blurred_album_art">Blur album cover</string>
     <string name="pref_title_circle_button">Circular play button</string>
+    <string name="pref_title_classic_notification">Klasikong disenyo ng notification</string>
     <string name="pref_title_colored_app">Adaptive na kulay</string>
     <string name="pref_title_colored_notification">May kulay na notification</string>
     <string name="pref_title_cross_fade">Crossfade (Beta)</string>
@@ -391,6 +393,7 @@
     <string name="pref_title_expand_now_playing_panel">Ipakita ang now playing screen</string>
     <string name="pref_title_extra_controls">Mga karagdagang kontrol</string>
     <string name="pref_title_extra_song_info">Impormasyon ng kanta</string>
+    <string name="pref_title_gapless_playback">Walang puwang na pag-playback</string>
     <string name="pref_title_general_theme">Theme ng app</string>
     <string name="pref_title_home_album_grid_style">Grid ng Album</string>
     <string name="pref_title_home_artist_grid_style">Grid ng Artista</string>
@@ -405,7 +408,6 @@
     <string name="pref_title_open_source_licences">Mga lisensyang open source</string>
     <string name="pref_title_pause_history">Pause history</string>
     <string name="pref_title_remember_tab">Remember last tab</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">Show lyrics</string>
     <string name="pref_title_suggestions">Show suggestions</string>
     <string name="pref_title_swipe_anywhere_now_playing">Swipe anywhere to change song</string>
@@ -446,13 +448,10 @@
     <string name="restored_previous_purchase_please_restart">Ibinalik ang nakaraang pagbili. Mangyaring i-restart ang app upang magamit ang lahat ng mga tampok.</string>
     <string name="restored_previous_purchases">Ibinalik ang mga nakaraang pagbili.</string>
     <string name="restoring_purchase">Ibinabalik ang pagbili…</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">Ang app ay nangangailangan ng permiso upang ma-access ang mga setting ng iyong device upang maitakda ang musika bilang Ringtone</string>
     <string name="ringtone_title">Ringtone (Opsyonal)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">Nabigo sa pagtanggal ng file: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">Hindi makakuha ng SAF URI</string>
@@ -503,8 +502,6 @@
     <string name="sort_order_num_songs">Bilang ng kanta</string>
     <string name="sort_order_num_songs_desc">Bilang ng kanta pababa</string>
     <string name="sort_order_year">Taon</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">Pababa</string>
     <string name="speech_not_supported">Paumanhin! Hindi sinusuportahan ng iyong device ang speech input</string>
     <string name="speech_prompt">Hanapin ang iyong librerya</string>
@@ -561,10 +558,4 @@
     <string name="you_have_to_select_at_least_one_category">Kailangan mong pumili ng kahit isang kategorya.</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">Ipapasa ka sa website ng tagasubaybay ng isyu.</string>
     <string name="your_account_data_is_only_used_for_authentication">Ginagamit lang ang iyong account data para sa pagpapatunay.</string>
-    <string name="could_not_write_tags_to_file">Could not write tags to the music file!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

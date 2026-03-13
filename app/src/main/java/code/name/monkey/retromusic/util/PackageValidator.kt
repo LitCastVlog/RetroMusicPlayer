@@ -167,14 +167,14 @@ class PackageValidator(
     private fun buildCallerInfo(callingPackage: String): CallerPackageInfo? {
         val packageInfo = getPackageInfo(callingPackage) ?: return null
 
-        val appName = packageInfo.applicationInfo?.loadLabel(packageManager)?.toString() ?: return null
-        val uid = packageInfo.applicationInfo?.uid ?: return null
+        val appName = packageInfo.applicationInfo.loadLabel(packageManager).toString()
+        val uid = packageInfo.applicationInfo.uid
         val signature = getSignature(packageInfo)
 
-        val requestedPermissions = packageInfo.requestedPermissions ?: emptyArray()
-        val permissionFlags = packageInfo.requestedPermissionsFlags ?: IntArray(requestedPermissions.size)
+        val requestedPermissions = packageInfo.requestedPermissions
+        val permissionFlags = packageInfo.requestedPermissionsFlags
         val activePermissions = mutableSetOf<String>()
-        requestedPermissions.forEachIndexed { index, permission ->
+        requestedPermissions?.forEachIndexed { index, permission ->
             if (permissionFlags[index] and REQUESTED_PERMISSION_GRANTED != 0) {
                 activePermissions += permission
             }
@@ -207,13 +207,12 @@ class PackageValidator(
      */
     @Suppress("deprecation")
     private fun getSignature(packageInfo: PackageInfo): String? {
-        val signatures = packageInfo.signatures
-        return if (signatures == null || signatures.size != 1) {
-            // Security best practices dictate that an app should be signed with exactly one (1)
-            // signature. Because of this, if there are multiple signatures, reject it.
+        // Security best practices dictate that an app should be signed with exactly one (1)
+        // signature. Because of this, if there are multiple signatures, reject it.
+        return if (packageInfo.signatures == null || packageInfo.signatures.size != 1) {
             null
         } else {
-            val certificate = signatures[0].toByteArray()
+            val certificate = packageInfo.signatures[0].toByteArray()
             getSignatureSha256(certificate)
         }
     }

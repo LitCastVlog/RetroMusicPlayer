@@ -208,6 +208,7 @@
     <string name="import_playlist">Importar lista de reproducción</string>
     <string name="import_playlist_message">Importa todas las listas de reproducción en el almacenamiento Android con canciones, si las listas ya existen, las canciones se fusionarán.</string>
     <string name="inserted_x_songs_into_playlist_x">%1$d canciones agregadas a la lista de reproducción %2$s.</string>
+    <string name="instagram_page_summary">Comparte tu configuración de Retro Music en Instagram</string>
     <string name="keyboard">Teclado</string>
     <string name="label_bit_rate">Tasa de bits</string>
     <string name="label_file_format">Formato</string>
@@ -258,6 +259,8 @@
     <string name="not_recently_played">No reproducido recientemente</string>
     <string name="nothing_to_scan">Nada que escanear.</string>
     <string name="nothing_to_see">Nada que ver</string>
+    <string name="notification">Notificación</string>
+    <string name="notification_settings_summary">Personaliza el estilo de la notificación</string>
     <string name="now_playing">Reproduciendo ahora</string>
     <string name="now_playing_queue">Cola de reproducción actual</string>
     <string name="now_playing_summary">Personalizar la pantalla de reproducción actual</string>
@@ -319,6 +322,7 @@
     <string name="pref_summary_bluetooth_playback">Start playing as soon as connected to bluetooth device</string>
     <string name="pref_summary_blurred_album_art">Blur the album cover on the lockscreen. Can cause problems with third party apps and widgets</string>
     <string name="pref_summary_carousel_effect">Carousel effect for the album art in the now playing screen. Note that Card and Blur Card themes won\'t work</string>
+    <string name="pref_summary_classic_notification">Use the classic notification design</string>
     <string name="pref_summary_colored_app">The background and control button colors change according to the album art from the now playing screen</string>
     <string name="pref_summary_colored_app_shortcuts">Colors the app shortcuts in the accent color. Every time you change the color please toggle this to take effect</string>
     <string name="pref_summary_colored_notification">"Colors the notification in the album cover\u2019s vibrant color"</string>
@@ -327,6 +331,7 @@
     <string name="pref_summary_expand_now_playing_panel">Clicking on the notification will show now playing screen instead of the home screen</string>
     <string name="pref_summary_extra_controls">Add extra controls for mini player</string>
     <string name="pref_summary_extra_song_info">Show extra Song information, such as file format, bitrate and frequency</string>
+    <string name="pref_summary_gapless_playback">"Can cause playback issues on some devices."</string>
     <string name="pref_summary_home_banner">Show or hide the home banner</string>
     <string name="pref_summary_ignore_media_store_artwork">Can increase the album cover quality, but causes slower image loading times. Only enable this if you have problems with low resolution artworks</string>
     <string name="pref_summary_library_categories">Configure visibility and order of library categories.</string>
@@ -357,6 +362,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth playback</string>
     <string name="pref_title_blurred_album_art">Blur album cover</string>
     <string name="pref_title_circle_button">Circular play button</string>
+    <string name="pref_title_classic_notification">Classic notification design</string>
     <string name="pref_title_colored_app">Adaptive color</string>
     <string name="pref_title_colored_notification">Colored notification</string>
     <string name="pref_title_cross_fade">Crossfade (Beta)</string>
@@ -365,6 +371,7 @@
     <string name="pref_title_expand_now_playing_panel">Show now playing screen</string>
     <string name="pref_title_extra_controls">Extra controls</string>
     <string name="pref_title_extra_song_info">Song info</string>
+    <string name="pref_title_gapless_playback">Gapless playback</string>
     <string name="pref_title_general_theme">App theme</string>
     <string name="pref_title_home_album_grid_style">Album grid</string>
     <string name="pref_title_home_artist_grid_style">Artist grid</string>

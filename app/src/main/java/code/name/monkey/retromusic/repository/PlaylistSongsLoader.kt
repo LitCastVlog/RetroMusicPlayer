@@ -12,8 +12,6 @@
  * See the GNU General Public License for more details.
  */
 
-@file:Suppress("DEPRECATION")
-
 package code.name.monkey.retromusic.repository
 
 import android.content.Context

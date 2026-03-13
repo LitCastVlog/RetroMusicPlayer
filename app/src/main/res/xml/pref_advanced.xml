@@ -62,22 +62,6 @@
             android:title="@string/pref_keep_screen_on_title"
             app:icon="@drawable/ic_settings_brightness" />
 
-        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:defaultValue="false"
-            android:key="show_when_locked"
-            android:layout="@layout/list_item_view_switch"
-            android:summary="@string/pref_show_when_locked_summary"
-            android:title="@string/pref_show_when_locked_title"
-            app:icon="@drawable/ic_screen_lock_portrait" />
-
-        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:defaultValue="false"
-            android:key="save_last_directory"
-            android:layout="@layout/list_item_view_switch"
-            android:summary="@string/pref_save_last_directory_summary"
-            android:title="@string/pref_save_last_directory_title"
-            app:icon="@drawable/ic_screen_lock_portrait" />
-
 
     </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference

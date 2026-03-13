@@ -25,7 +25,6 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.model.Song
@@ -51,7 +50,7 @@ abstract class BaseAppWidget : AppWidgetProvider() {
         updateIntent.putExtra(EXTRA_APP_WIDGET_NAME, NAME)
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds)
         updateIntent.addFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY)
-        LocalBroadcastManager.getInstance(context).sendBroadcast(updateIntent)
+        context.sendBroadcast(updateIntent)
     }
 
     /**
@@ -102,7 +101,9 @@ abstract class BaseAppWidget : AppWidgetProvider() {
             PendingIntent.getForegroundService(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
         } else {
             PendingIntent.getService(
-                context, 0, intent, PendingIntent.FLAG_IMMUTABLE
+                context, 0, intent, if (VersionUtils.hasMarshmallow())
+                    PendingIntent.FLAG_IMMUTABLE
+                else 0
             )
         }
     }

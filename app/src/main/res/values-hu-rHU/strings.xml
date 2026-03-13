@@ -221,6 +221,7 @@
     <string name="import_playlist">Lejátszólista importálása</string>
     <string name="import_playlist_message">Importálja az Android Media Store-ban lévő összes lejátszási listát a zenékkel együtt. Ha a lejátszási lista már létezik, a zeneszámok össze lesznek vonva.</string>
     <string name="inserted_x_songs_into_playlist_x">%1$d dalt betett a %2$s lejátszási listába.</string>
+    <string name="instagram_page_summary">Osszd meg Retro Music beállításaid, mutasd meg a Instagram-on</string>
     <string name="keyboard">Billentyűzet</string>
     <string name="label_bit_rate">Bitráta</string>
     <string name="label_file_format">Formátum</string>
@@ -272,13 +273,14 @@
     <string name="no_purchase_found">Nem található korábbi vásárlás.</string>
     <string name="no_results">Nincs eredmény</string>
     <string name="no_songs">Nincs dal</string>
-    <string name="no_search_results">No search results</string>
     <string name="normal">Normál</string>
     <string name="normal_lyrics">Normál dalszövegek</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> nem szerepel a média tárban.]]></string>
     <string name="not_recently_played">Nem mostanában játszott</string>
     <string name="nothing_to_scan">Nincs mit beolvasni.</string>
     <string name="nothing_to_see">Nincs mit látni</string>
+    <string name="notification">Értesítés</string>
+    <string name="notification_settings_summary">Értesítési stílus testreszabása</string>
     <string name="now_playing">Most játszott</string>
     <string name="now_playing_queue">Sorban áll</string>
     <string name="now_playing_summary">Most játszott képernyő személyre szabása</string>
@@ -331,8 +333,6 @@
     <string name="pref_keep_pause_on_zero_volume_title">Szünet nulla hangerőn</string>
     <string name="pref_keep_screen_on_summary">Vedd figyelembe, hogy ezen funkció engedélyezése hatással lehet az akkuidőre</string>
     <string name="pref_keep_screen_on_title">Tartsa bekapcsolva a képernyőt</string>
-    <string name="pref_show_when_locked_summary">Requires an app restart to take effect. The player must be on foreground before locking for this feature to work</string>
-    <string name="pref_show_when_locked_title">Show the player interface when locked</string>
     <string name="pref_language_name">Válasszon nyelvet</string>
     <string name="pref_snow_fall_title">Hóesés effect</string>
     <string name="pref_summary_album_art_on_lockscreen">A jelenlegi zeneszám albumborítóját zárolt háttérképként használja.</string>
@@ -343,6 +343,7 @@
     <string name="pref_summary_bluetooth_playback">Amint csatlakoztatta a bluetooth készüléket, kezdje el a lejátszást</string>
     <string name="pref_summary_blurred_album_art">Elhomályosítja az album borítóját a zárolás képernyőjén. Problémákat okozhat harmadik féltől származó alkalmazásokkal és widgetekkel.</string>
     <string name="pref_summary_carousel_effect">Körhinta effektus a most játszott képernyőn lévő albumborítón. Ne feledje, hogy a Kártya és a Homályosított Kártya téma nem fog működni</string>
+    <string name="pref_summary_classic_notification">Használja a klasszikus értesítési kinézetet.</string>
     <string name="pref_summary_colored_app">A háttér és a vezérlőgombok színe a most játszott képernyőn megjelenő albumborító szerint változik</string>
     <string name="pref_summary_colored_app_shortcuts">Beszínezi az alkalmazás parancsikonjait a kijelölő színére. Minden alkalommal, amikor megváltoztattad a kijelölő színt, kérjük, kapcsold be ezt az opciót, hogy érvényesüljön.</string>
     <string name="pref_summary_colored_notification">"Értesítések színezése az albumborító domináns színei alapján."</string>
@@ -351,6 +352,7 @@
     <string name="pref_summary_expand_now_playing_panel">Az értesítésre kattintva a kezdőképernyő helyett a lejátszási képernyő jelenik meg</string>
     <string name="pref_summary_extra_controls">Extra vezérlők hozzáadása a mini lejátszóhoz</string>
     <string name="pref_summary_extra_song_info">Mutasson további dalinformációkat, például a fájl formátumát, bitrátáját és frekvenciáját</string>
+    <string name="pref_summary_gapless_playback">"Egyes eszközökön lejátszási problémákat okozhat."</string>
     <string name="pref_summary_home_banner">Kezdőlap banner mutatása/elrejtése</string>
     <string name="pref_summary_ignore_media_store_artwork">Növelheti az albumborító minőségét, de lassabb kép betöltési időt eredményez. Csak akkor engedélyezze ezt, ha problémái vannak az alacsony felbontású borítókkal kapcsolatban.</string>
     <string name="pref_summary_library_categories">A könyvtári kategóriák sorrendjének és láthatóságának beállítása.</string>
@@ -359,7 +361,6 @@
     <string name="pref_summary_open_source_licences">A nyílt forráskódú szoftverek licence részletei</string>
     <string name="pref_summary_pause_history">Ha engedélyezve van, akkor az újonnan lejátszott dalok nem jelennek meg az előzményekben</string>
     <string name="pref_summary_remember_tab">Lépjen az utoljára használt fülre az alkalmazás indításakor</string>
-    <string name="pref_summary_enable_search_playlist">Show a search field in a playlist</string>
     <string name="pref_summary_show_lyrics">Szinkronizált dalszövegek megjelenítése albumborító helyett</string>
     <string name="pref_summary_suggestions">Új zene mix mutatása kezdőoldalon</string>
     <string name="pref_summary_swipe_anywhere_now_playing">Engedélyezi a zenék váltását a \'Jelenleg játszott\' képernyőn, akárhova is húzza az ujját</string>
@@ -383,6 +384,7 @@
     <string name="pref_title_bluetooth_playback">Bluetooth lejátszás</string>
     <string name="pref_title_blurred_album_art">Elhomályosított albumborító</string>
     <string name="pref_title_circle_button">Kerek lejátszási gomb</string>
+    <string name="pref_title_classic_notification">Klasszikus értesítés design</string>
     <string name="pref_title_colored_app">Adaptív szín</string>
     <string name="pref_title_colored_notification">Színes értesítés</string>
     <string name="pref_title_cross_fade">Átfedés (Béta)</string>
@@ -391,6 +393,7 @@
     <string name="pref_title_expand_now_playing_panel">Most játszott képernyő mutatása</string>
     <string name="pref_title_extra_controls">Extra vezérlők</string>
     <string name="pref_title_extra_song_info">Dalinformáció</string>
+    <string name="pref_title_gapless_playback">Szünetmentes lejátszás</string>
     <string name="pref_title_general_theme">Alkalmazás téma</string>
     <string name="pref_title_home_album_grid_style">Album rács</string>
     <string name="pref_title_home_artist_grid_style">Kezdőlapi előadó rács</string>
@@ -405,7 +408,6 @@
     <string name="pref_title_open_source_licences">Nyílt forráskódú licencek</string>
     <string name="pref_title_pause_history">Megállítás előzmények</string>
     <string name="pref_title_remember_tab">Jegyezze meg a legutóbbi lapot</string>
-    <string name="pref_title_enable_search_playlist">Enable search in playlist</string>
     <string name="pref_title_show_lyrics">Dalszöveg megjelenítése</string>
     <string name="pref_title_suggestions">Javaslatok megjelenítése</string>
     <string name="pref_title_swipe_anywhere_now_playing">Húzd az ujjad bárhova, hogy zenét válts</string>
@@ -446,13 +448,10 @@
     <string name="restored_previous_purchase_please_restart">Az előző vásárlás helyreállítása. Kérjük, indítsa újra az alkalmazást az összes funkció használatához.</string>
     <string name="restored_previous_purchases">Korábbi vásárlások visszaállítása.</string>
     <string name="restoring_purchase">A vásárlás visszaállítása ...</string>
-    <string name="billing_error">An error occurred while communicating with Google Play Billing</string>
     <string name="retro_music_player">Retro Music Player</string>
     <string name="retro_music_pro">Retro Music Pro</string>
     <string name="ringtone_summary">Az alkalmazásnak engedélyre van szüksége a készülék beállításaihoz a zeneszám csengőhangként való beállításához</string>
     <string name="ringtone_title">Csengőhang (Opcionális)</string>
-    <string name="permission_alarm_summary">The app needs permission to schedule exact alarms to set sleep timers</string>
-    <string name="permission_alarm_title">Alarm (Optional)</string>
     <string name="saf_delete_failed">A fájl törlése sikertelen: %s</string>
     <!-- SAF -->
     <string name="saf_error_uri">Nem lehet SAF URI</string>
@@ -503,8 +502,6 @@
     <string name="sort_order_num_songs">Zenék darabszáma</string>
     <string name="sort_order_num_songs_desc">Zenék darabszáma szerint csökkenő sorrendben</string>
     <string name="sort_order_year">Év</string>
-    <string name="sort_order_year_asc">Year ascending</string>
-    <string name="sort_order_year_desc">Year descending</string>
     <string name="sort_order_z_a">Csökkenő</string>
     <string name="speech_not_supported">Sajnálom! A készülék nem támogatja a beszéd alapú bevitelt.</string>
     <string name="speech_prompt">Keresés a könyvtárban</string>
@@ -561,10 +558,4 @@
     <string name="you_have_to_select_at_least_one_category">Legalább egy kategóriát kell kiválasztania</string>
     <string name="you_will_be_forwarded_to_the_issue_tracker_website">Továbbítani fogjuk a problémakezelő weboldalra.</string>
     <string name="your_account_data_is_only_used_for_authentication">Fiókja adatait kizárólag a hitelesítéshez fogjuk használni.</string>
-    <string name="could_not_write_tags_to_file">Nem tudott címkéket írni a zenefájlba!</string>
-    <string name="sleep_timer_no_permission">No permission to schedule alarms, please allow Retro Music.</string>
-    <string name="scanning_folders_files">Scanning folders and files…</string>
-    <string name="scan_complete">Scan complete: %1$d media items found.</string>
-    <string name="pref_save_last_directory_summary">When switching to folder view, restore last used directory</string>
-    <string name="pref_save_last_directory_title">Save Last Directory</string>
 </resources>

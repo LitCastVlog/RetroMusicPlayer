@@ -29,7 +29,7 @@ import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
 import android.view.View
-import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.LinearInterpolator
 import android.widget.Scroller
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.withSave
@@ -104,7 +104,7 @@ class CoverLrcView @JvmOverloads constructor(
             }
 
             override fun onScroll(
-                e1: MotionEvent?,
+                e1: MotionEvent,
                 e2: MotionEvent,
                 distanceX: Float,
                 distanceY: Float,
@@ -124,7 +124,7 @@ class CoverLrcView @JvmOverloads constructor(
             }
 
             override fun onFling(
-                e1: MotionEvent?,
+                e1: MotionEvent,
                 e2: MotionEvent,
                 velocityX: Float,
                 velocityY: Float,
@@ -175,7 +175,7 @@ class CoverLrcView @JvmOverloads constructor(
     private fun init(attrs: AttributeSet?) {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.LrcView)
         mCurrentTextSize = ta.getDimension(
-            R.styleable.LrcView_lrcTextSize, resources.getDimension(R.dimen.lrc_current_text_size)
+            R.styleable.LrcView_lrcTextSize, resources.getDimension(R.dimen.lrc_text_size)
         )
         mNormalTextSize = ta.getDimension(
             R.styleable.LrcView_lrcNormalTextSize,
@@ -409,7 +409,7 @@ class CoverLrcView @JvmOverloads constructor(
                 mCurrentTextSize = it.animatedValue as Float
                 invalidate()
             }
-            duration = mAnimationDuration
+            duration = 300L
             start()
         }
     }
@@ -497,7 +497,7 @@ class CoverLrcView @JvmOverloads constructor(
         endAnimation()
         mAnimator = ValueAnimator.ofFloat(mOffset, offset).apply {
             this.duration = duration
-            interpolator = AccelerateDecelerateInterpolator()
+            interpolator = LinearInterpolator()
             addUpdateListener { animation: ValueAnimator ->
                 mOffset = animation.animatedValue as Float
                 invalidate()

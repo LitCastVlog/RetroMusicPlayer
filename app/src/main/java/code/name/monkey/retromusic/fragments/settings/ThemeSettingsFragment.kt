@@ -10,7 +10,6 @@
  * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
- *
  */
 package code.name.monkey.retromusic.fragments.settings
 
@@ -77,10 +76,6 @@ class ThemeSettingsFragment : AbsSettingsFragment() {
         }
         val blackTheme: ATESwitchPreference? = findPreference(BLACK_THEME)
         blackTheme?.setOnPreferenceChangeListener { _, _ ->
-            if (!App.isProVersion()) {
-                showProToastAndNavigate("Just Black theme")
-                return@setOnPreferenceChangeListener false
-            }
             ThemeStore.markChanged(requireContext())
             if (VersionUtils.hasNougatMR()) {
                 requireActivity().setTheme(PreferenceUtil.themeResFromPrefValue("black"))

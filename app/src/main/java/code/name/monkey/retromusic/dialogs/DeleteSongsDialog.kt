@@ -27,7 +27,6 @@ import androidx.fragment.app.DialogFragment
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.EXTRA_SONG
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.activities.saf.SAFGuideActivity
 import code.name.monkey.retromusic.extensions.extraNotNull
 import code.name.monkey.retromusic.extensions.materialDialog
 import code.name.monkey.retromusic.fragments.LibraryViewModel
@@ -43,31 +42,6 @@ import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class DeleteSongsDialog : DialogFragment() {
     lateinit var libraryViewModel: LibraryViewModel
-
-    // Activity Result Launchers for the new API
-    private val safGuideResultLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            // Launch tree picker directly
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                putExtra("android.content.extra.SHOW_ADVANCED", true)
-            }
-            safPickerResultLauncher.launch(intent)
-        }
-    }
-
-    private val safPickerResultLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            result.data?.let { data ->
-                SAFUtil.saveTreeUri(requireActivity(), data)
-                val songs = extraNotNull<List<Song>>(EXTRA_SONG).value
-                deleteSongs(songs)
-            }
-        }
-    }
 
     companion object {
         fun create(song: Song): DeleteSongsDialog {
@@ -144,12 +118,30 @@ class DeleteSongsDialog : DialogFragment() {
                         if (SAFUtil.isSDCardAccessGranted(requireActivity())) {
                             deleteSongs(songs)
                         } else {
-                            safGuideResultLauncher.launch(
-                                Intent(requireActivity(), SAFGuideActivity::class.java)
+                            startActivityForResult(
+                                Intent(requireActivity(), code.name.monkey.retromusic.activities.saf.SAFGuideActivity::class.java),
+                                code.name.monkey.retromusic.activities.saf.SAFGuideActivity.REQUEST_CODE_SAF_GUIDE
                             )
                         }
                     }
                 }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            code.name.monkey.retromusic.activities.saf.SAFGuideActivity.REQUEST_CODE_SAF_GUIDE -> {
+                SAFUtil.openTreePicker(this)
+            }
+            SAFUtil.REQUEST_SAF_PICK_TREE,
+            SAFUtil.REQUEST_SAF_PICK_FILE -> {
+                if (resultCode == Activity.RESULT_OK) {
+                    SAFUtil.saveTreeUri(requireActivity(), data)
+                    val songs = extraNotNull<List<Song>>(EXTRA_SONG).value
+                    deleteSongs(songs)
+                }
+            }
         }
     }
 
@@ -166,6 +158,5 @@ class DeleteSongsDialog : DialogFragment() {
         libraryViewModel.forceReload(ReloadType.HomeSections)
         libraryViewModel.forceReload(ReloadType.Artists)
         libraryViewModel.forceReload(ReloadType.Albums)
-        libraryViewModel.forceReload(ReloadType.PlayCount)
     }
 }

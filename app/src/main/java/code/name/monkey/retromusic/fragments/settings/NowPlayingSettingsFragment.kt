@@ -34,11 +34,7 @@ class NowPlayingSettingsFragment : AbsSettingsFragment(),
         updateAlbumCoverStyleSummary()
 
         val carouselEffect: TwoStatePreference? = findPreference(CAROUSEL_EFFECT)
-        carouselEffect?.setOnPreferenceChangeListener { _, newValue ->
-            if (newValue as Boolean && !App.isProVersion()) {
-                showProToastAndNavigate(getString(R.string.pref_title_toggle_carousel_effect))
-                return@setOnPreferenceChangeListener false
-            }
+        carouselEffect?.setOnPreferenceChangeListener { _, _ ->
             return@setOnPreferenceChangeListener true
         }
     }
@@ -72,7 +68,7 @@ class NowPlayingSettingsFragment : AbsSettingsFragment(),
         PreferenceUtil.unregisterOnSharedPreferenceChangedListener(this)
     }
 
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
         when (key) {
             NOW_PLAYING_SCREEN_ID -> updateNowPlayingScreenSummary()
             ALBUM_COVER_STYLE -> updateAlbumCoverStyleSummary()

@@ -26,7 +26,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Environment;
 
 import androidx.annotation.NonNull;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -156,7 +155,7 @@ public class BlacklistStore extends SQLiteOpenHelper {
   }
 
   private void notifyMediaStoreChanged() {
-    LocalBroadcastManager.getInstance(context).sendBroadcast(new Intent(MEDIA_STORE_CHANGED));
+    context.sendBroadcast(new Intent(MEDIA_STORE_CHANGED));
   }
 
   @NonNull
