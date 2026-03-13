@@ -1130,7 +1130,11 @@ class MusicService : MediaBrowserServiceCompat(),
                         val stream = java.io.ByteArrayOutputStream()
                         resource.compress(Bitmap.CompressFormat.PNG, 100, stream)
                         val art = stream.toByteArray()
-                        externalDisplayManager.updateSong(currentSong.title, art)
+                        externalDisplayManager.updateSong(
+                            artist = currentSong.artistName,
+                            title = currentSong.title,
+                            art = art
+                        )
                     }
 
                     override fun onLoadCleared(placeholder: Drawable?) {}
