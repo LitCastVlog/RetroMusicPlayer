@@ -1,15 +1,3 @@
-## **Q: How do I get the beta version of Retro Music?**
-You can opt-in for the beta build by clicking on this link: https://play.google.com/apps/testing/code.name.monkey.retromusic
-
-___
-
-## **Q: How to restore my purchases?**
-Make sure to switch and use your account in the Play Store app through which you purchased before installing Retro Music. The Google account used to install the app is also used to purchase/restore the pro license.
-
-If you've already installed the app, remove all other accounts except the one from which you purchased premium, and then restore the purchase.
-
-___
-
 ## Q: **How do I use offline synced lyrics?**
 There are three methods for adding offline synced lyrics in Retro Music.
 
@@ -94,7 +82,7 @@ Clear the app's cache and data.
 ___
 
 ## **Q: My app is crashing, how do I fix this?** (Sorry, settings have changed internally) 
-Please try to clear the data of the app. If it doesn't work, reinstalling fresh from the play store should help.
+Please try to clear the data of the app. If it doesn't work, reinstalling fresh should help.
 ___
 
 ## **Q: Why has all the text gone white/disappeared?** 
