@@ -26,7 +26,7 @@ object Constants {
     const val FAQ_LINK = "https://github.com/MuntashirAkon/Metro/blob/master/FAQ.md"
 
     const val IS_MUSIC =
-        MediaStore.Audio.AudioColumns.IS_MUSIC + "=1" + " AND " + MediaStore.Audio.AudioColumns.TITLE + " != ''"
+        MediaStore.Audio.AudioColumns.TITLE + " != ''"
 
     const val DATA = "_data"
 
