@@ -37,10 +37,10 @@
         android:title="@string/pref_header_advanced">
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference
-            android:defaultValue="30"
+            android:defaultValue="0"
             android:key="filter_song"
             android:layout="@layout/list_item_view_seekbar"
-            android:max="60"
+            android:max="300"
             android:summary="@string/pref_filter_song_summary"
             android:title="@string/pref_filter_song_title"
             app:icon="@drawable/ic_filter_song"
